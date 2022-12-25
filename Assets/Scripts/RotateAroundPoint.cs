@@ -10,6 +10,9 @@ public class RotateAroundPoint : MonoBehaviour
     public float ballSizeTimer = 10;
     public float ballSpeedTimer = 10;
     public float ballUltTimer = 15;
+    public float ballSizeCooldown = 10;
+    public float ballSpeedCooldown = 10;
+    public float ballUltCooldown = 15;
     // Start is called before the first frame update
     void Start()
     {

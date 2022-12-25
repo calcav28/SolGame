@@ -8,6 +8,9 @@ public class AbilityTimerToText : MonoBehaviour
     public float eNumber = 10;
     public float rNumber = 10;
     public float tNumber = 15;
+    public float eNumberCountdown;
+    public float rNumberCountdown;
+    public float tNumberCountdown;
     public GameObject circleDude;
     public TMP_Text displayText;
     public string compareText;
@@ -18,6 +21,9 @@ public class AbilityTimerToText : MonoBehaviour
         eNumber = 10;
         rNumber = 10;
         tNumber = 15;
+        eNumberCountdown = 10;
+        rNumberCountdown = 10;
+        tNumberCountdown = 15;
     }
 
     // Update is called once per frame
@@ -40,13 +46,21 @@ public class AbilityTimerToText : MonoBehaviour
             tNumber = 15;
         }
 
-        switch(compareText)
+        eNumberCountdown = circleDude.GetComponent<RotateAroundPoint>().ballSizeCooldown;
+        eNumberCountdown -= eNumber;
+        rNumberCountdown = circleDude.GetComponent<RotateAroundPoint>().ballSpeedCooldown;
+        rNumberCountdown -= rNumber;
+        tNumberCountdown = circleDude.GetComponent<RotateAroundPoint>().ballUltCooldown;
+        tNumberCountdown -= tNumber;
+
+        switch (compareText)
         {
         case "2ETime": 
             if (eNumber == 10) {
                 displayText.text = "Ready!";
             } else {
-                displayText.text = eNumber.ToString();
+                    eNumberCountdown = Mathf.FloorToInt(eNumberCountdown);
+                    displayText.text = eNumberCountdown.ToString();
             }
             break;
 
@@ -54,7 +68,8 @@ public class AbilityTimerToText : MonoBehaviour
             if (rNumber == 10) {
                 displayText.text = "Ready!";
             } else {
-                displayText.text = rNumber.ToString();
+                    rNumberCountdown = Mathf.FloorToInt(rNumberCountdown);
+                    displayText.text = rNumberCountdown.ToString();
             }
             break;
 
@@ -62,7 +77,8 @@ public class AbilityTimerToText : MonoBehaviour
             if (tNumber == 15) {
                 displayText.text = "Ready!";
             } else {
-                displayText.text = tNumber.ToString();
+                    tNumberCountdown = Mathf.FloorToInt(tNumberCountdown);
+                    displayText.text = tNumberCountdown.ToString();
             }
             break;
 
