@@ -100,11 +100,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28226af4f12174fcc98b8630c44a37d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: -50
+  rotationSpeed: -60
   pivotObject: {fileID: 0}
   ballSizeTimer: 10
   ballSpeedTimer: 10
   ballUltTimer: 15
+  ballSizeCooldown: 10
+  ballSpeedCooldown: 10
+  ballUltCooldown: 15
 --- !u!50 &7025617735407235628
 Rigidbody2D:
   serializedVersion: 4
