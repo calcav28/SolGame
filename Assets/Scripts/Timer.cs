@@ -7,12 +7,13 @@ public class Timer : MonoBehaviour
 {
     public TMP_Text timerText;
     public float timerTime;
-    public int goodTimerTime = 0;
+    public int goodTimerTime;
     public bool playing;
     // Start is called before the first frame update
     void Start()
     {
         timerTime = 0.0f;
+        goodTimerTime = 0;
         playing = true;
     }
 
