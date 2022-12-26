@@ -64,7 +64,6 @@ public class RotateAroundPoint : MonoBehaviour
         gameObject.transform.localPosition /= 1.25f;
         rotationSpeed = rotationSpeed / 2.5f;
         gameObject.transform.localScale += new Vector3(-1.25f, -1.25f, -1f);
-
     }
 
 }
