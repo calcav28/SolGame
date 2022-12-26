@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  objectToFollow: {fileID: 0}
+  objectToFollow: {fileID: 3058125068487187030, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
+  invuCircle: {fileID: 6061687496405145927, guid: 5f63ec84a4b794e928ca1c266d881879, type: 3}
 --- !u!58 &4444853021208158921
 CircleCollider2D:
   m_ObjectHideFlags: 0

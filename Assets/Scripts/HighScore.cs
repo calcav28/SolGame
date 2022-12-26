@@ -5,7 +5,7 @@ using TMPro;
 
 public class HighScore : MonoBehaviour
 {
-/*
+
     public GameObject scoreObject;
     public TMP_Text highScoreText;
     public int scoreHere;
@@ -22,5 +22,5 @@ public class HighScore : MonoBehaviour
         scoreHere = scoreObject.GetComponent<NumberToText>().mainHighScore;
         highScoreText.text = highScore.ToString();
     }
-    */
+    
 }

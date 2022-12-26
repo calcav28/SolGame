@@ -11,23 +11,24 @@ public class Follow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        objectToFollow = GameObject.Find("Character");
+        invuCircle = GameObject.Find("InvulnerabilityCircle");
     }
 
     // Update is called once per frame
     void Update()
     {
-        objectToFollow = GameObject.Find("Character");
-        invuCircle = GameObject.Find("InvulnerabilityCircle");
         
         if (objectToFollow.activeSelf) {
             Vector3 movement = objectToFollow.transform.position;            
             transform.position = Vector3.MoveTowards(transform.position, movement, moveSpeed * Time.deltaTime);
         } 
 
-        if (invuCircle.activeSelf) {
+        if (!objectToFollow.activeSelf) {
             Vector3 invMovement = invuCircle.transform.position;
             transform.position = Vector3.MoveTowards(transform.position, invMovement, moveSpeed * Time.deltaTime);
         }
     }
+
+    //invuCircle.activeSelf
 }

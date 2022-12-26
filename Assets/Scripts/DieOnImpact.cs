@@ -8,11 +8,13 @@ public class DieOnImpact : MonoBehaviour
     public GameObject charac;
     public GameObject ourTime;
     public GameObject theHighScore;
+    public bool isInvulnerable;
     
     void Start() {
         charac = GameObject.Find("Character");
         ourTime = GameObject.Find("TimerTest");
         theHighScore = GameObject.Find("HighScoreTest");
+        isInvulnerable = false;
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
@@ -24,8 +26,9 @@ public class DieOnImpact : MonoBehaviour
             (coll.gameObject != GameObject.Find("InvulnerabilityCircle")) &&
             (coll.gameObject != GameObject.Find("Circle1")) &&
             (coll.gameObject != GameObject.Find("OrbitCircle")) &&
-            (coll.gameObject != GameObject.Find("OrbitCircle (1)")))
-        {
+            (coll.gameObject != GameObject.Find("OrbitCircle (1)")) &&
+            !isInvulnerable)
+        { //if certain boolean is also true, do this, set boolean to false when pressing spacebar for 5 seconds
             SceneManager.LoadScene("DeathScreen");
             DontDestroyOnLoad(charac);
             DontDestroyOnLoad(ourTime);
