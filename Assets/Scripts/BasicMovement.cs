@@ -19,6 +19,7 @@ public class BasicMovement : MonoBehaviour
 
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
         transform.position = transform.position + movement * MoveSpeed * Time.deltaTime;
+        transform.rotation = new Quaternion(0, 0, 0, 0);
         
     }
 }
