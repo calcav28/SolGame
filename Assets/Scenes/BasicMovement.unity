@@ -797,7 +797,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   objectToFollow: {fileID: 437583026}
-  invuCircle: {fileID: 0}
 --- !u!212 &598257560
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2155,7 +2154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751574331}
   - component: {fileID: 1751574330}
-  - component: {fileID: 1751574329}
+  - component: {fileID: 1751574332}
   m_Layer: 0
   m_Name: HighScoreTest
   m_TagString: Untagged
@@ -2163,29 +2162,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1751574329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751574328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aec7849b5b3ab457c9b6a868cd6baf97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myText: {fileID: 0}
-  ballsTotal: 0
-  circleOne: {fileID: 504320689}
-  circleTwo: {fileID: 409784834}
-  circleThree: {fileID: 479062033}
-  one: 0
-  two: 0
-  three: 0
-  all: 0
-  mainHighScore: 0
-  highScoreText: {fileID: 0}
 --- !u!212 &1751574330
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2253,6 +2229,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751574332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751574328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4969d199800b147fbbd01e82a3eb2275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 0}
+  circleFirst: {fileID: 0}
+  circleSecond: {fileID: 0}
+  circleThird: {fileID: 0}
+  mainHighScore: 0
+  prevHighScore: 0
 --- !u!1001 &1756275029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2524,8 +2518,6 @@ MonoBehaviour:
   two: 0
   three: 0
   all: 0
-  mainHighScore: 0
-  highScoreText: {fileID: 0}
 --- !u!1001 &1975543245
 PrefabInstance:
   m_ObjectHideFlags: 0

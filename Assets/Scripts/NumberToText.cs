@@ -14,15 +14,11 @@ public class NumberToText : MonoBehaviour
     public int two;
     public int three;
     public int all;
-    public int mainHighScore;
-    public TMP_Text highScoreText;
-
     
     void Start() {
         circleOne = GameObject.Find("Circle1");
         circleTwo = GameObject.Find("OrbitCircle");
         circleThree = GameObject.Find("OrbitCircle (1)");
-        mainHighScore = 0;
     }
     
     // Update is called once per frame
@@ -38,11 +34,5 @@ public class NumberToText : MonoBehaviour
 
         myText.text = all.ToString();
         
-        if (all >= mainHighScore) {
-            mainHighScore = all;
-        }
-        
-        highScoreText.text = mainHighScore.ToString();
-
     }
 }
