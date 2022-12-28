@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyObject : MonoBehaviour
+public class CharacterDestroyObject : MonoBehaviour
 {
     public int ballsHit = 0;
+    public bool isInvulnerable;
+
+    void Update() {
+        isInvulnerable = GameObject.Find("Character").GetComponent<DieOnImpact>().isInvulnerable;
+    }
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
@@ -15,7 +20,8 @@ public class DestroyObject : MonoBehaviour
             (coll.gameObject != GameObject.Find("Character")) &&
             (coll.gameObject != GameObject.Find("Circle1")) &&
             (coll.gameObject != GameObject.Find("OrbitCircle")) &&
-            (coll.gameObject != GameObject.Find("OrbitCircle (1)")))
+            (coll.gameObject != GameObject.Find("OrbitCircle (1)")) &&
+            isInvulnerable)
         {
             Destroy(coll.gameObject);
             ballsHit += 1;

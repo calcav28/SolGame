@@ -10,9 +10,11 @@ public class GetHighScore : MonoBehaviour
     public GameObject circleFirst;
     public GameObject circleSecond;
     public GameObject circleThird;
+    public GameObject characterObject;
     private int one;
     private int two;
     private int three;
+    private int character;
     private int all;
     public int mainHighScore;
     public int prevHighScore;
@@ -30,12 +32,14 @@ public class GetHighScore : MonoBehaviour
         circleFirst = GameObject.Find("Circle1");
         circleSecond = GameObject.Find("OrbitCircle");
         circleThird = GameObject.Find("OrbitCircle (1)");
+        characterObject = GameObject.Find("Character");
         
         one = circleFirst.GetComponent<DestroyObject>().ballsHit;
         two = circleSecond.GetComponent<DestroyObject>().ballsHit;
         three = circleThird.GetComponent<DestroyObject>().ballsHit;
+        character = characterObject.GetComponent<CharacterDestroyObject>().ballsHit;
         
-        all = one + two + three;
+        all = one + two + three + character;
 
         if (all >= prevHighScore) {
             mainHighScore = all;

@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 289.2, y: 205.50002}
+  m_AnchoredPosition: {x: 162, y: 205.50002}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93370505
@@ -297,7 +297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.7, y: 205.90005}
+  m_AnchoredPosition: {x: -175.8, y: 205.90005}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &209640634
@@ -723,6 +723,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3058125068487187030, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
   m_PrefabInstance: {fileID: 4780739484010461669}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &437583034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437583026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4442f97338c42979f15f21081e1178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballsHit: 0
+  isInvulnerable: 0
 --- !u!1 &479062033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4004519105131281180, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
@@ -885,7 +899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.1, y: 205.00006}
+  m_AnchoredPosition: {x: -12, y: 205.00006}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628826344
@@ -2230,6 +2244,7 @@ MonoBehaviour:
   circleFirst: {fileID: 0}
   circleSecond: {fileID: 0}
   circleThird: {fileID: 0}
+  characterObject: {fileID: 0}
   mainHighScore: 0
   prevHighScore: 0
 --- !u!1001 &1756275029
@@ -2499,9 +2514,11 @@ MonoBehaviour:
   circleOne: {fileID: 504320689}
   circleTwo: {fileID: 409784834}
   circleThree: {fileID: 479062033}
+  characterObject: {fileID: 0}
   one: 0
   two: 0
   three: 0
+  character: 0
   all: 0
 --- !u!1001 &1975543245
 PrefabInstance:
