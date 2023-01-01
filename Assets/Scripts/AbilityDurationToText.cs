@@ -22,8 +22,8 @@ public class AbilityDurationToText : MonoBehaviour
 
     void Update()
     {
-        //abilityUsed = GameObject.Find("Character").GetComponent<RotateAroundPoint>();
-        if ((Input.GetKeyDown(keyWanted) || Input.GetKeyDown(keyWanted2))) {
+        abilityUsed = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().usedAbility;
+        if ((Input.GetKeyDown(keyWanted) || Input.GetKeyDown(keyWanted2)) && abilityUsed) {
             myText.enabled = true;
             Invoke("TimerDown", 0f);
     }
