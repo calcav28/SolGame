@@ -739,6 +739,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballsHit: 0
   isInvulnerable: 0
+--- !u!60 &437583042
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437583026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.8828125}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.25, y: 0.43359375}
+      - {x: -0.5, y: 0}
+      - {x: -0.25, y: -0.43359375}
+      - {x: 0.25, y: -0.43359375}
+      - {x: 0.5, y: 0}
+      - {x: 0.25, y: 0.43359375}
 --- !u!1 &471316618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,7 +1836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 79, y: 180}
+  m_AnchoredPosition: {x: 47.2, y: 180}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952996848
@@ -1938,7 +1969,7 @@ MonoBehaviour:
   circle: {fileID: 4807083323387779771, guid: c4f4e690dd3bd42b395ece92edb19471, type: 3}
   radius: 1
   delay: 6
-  repeat: 2.5
+  repeat: 3
 --- !u!212 &1019502873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2387,7 +2418,7 @@ MonoBehaviour:
   circle: {fileID: 4807083323387779771, guid: c4f4e690dd3bd42b395ece92edb19471, type: 3}
   radius: 1
   delay: 1
-  repeat: 2.5
+  repeat: 3
 --- !u!212 &1398407253
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2491,7 +2522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 68, y: 205.30002}
+  m_AnchoredPosition: {x: 36.19999, y: 205.30002}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423410215
@@ -4096,6 +4127,10 @@ PrefabInstance:
       propertyPath: canBeInvulnerable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4780739483911079249, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
     - target: {fileID: 4780739483911079260, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
       propertyPath: invulnCircle
       value: 
@@ -4108,5 +4143,6 @@ PrefabInstance:
       propertyPath: m_UseAutoMass
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4780739483911079250, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}

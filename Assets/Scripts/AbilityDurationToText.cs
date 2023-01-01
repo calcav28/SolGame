@@ -11,7 +11,7 @@ public class AbilityDurationToText : MonoBehaviour
     public KeyCode keyWanted;
     public KeyCode keyWanted2;
     public bool abilityUsed;
-    // Start is called before the first frame update
+
     void Start()
     {
         duration = 5;
@@ -20,7 +20,6 @@ public class AbilityDurationToText : MonoBehaviour
         abilityUsed = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //abilityUsed = GameObject.Find("Character").GetComponent<RotateAroundPoint>();
