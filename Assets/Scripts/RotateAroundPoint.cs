@@ -13,12 +13,12 @@ public class RotateAroundPoint : MonoBehaviour
     public float ballSizeCooldown = 10;
     public float ballSpeedCooldown = 10;
     public float ballUltCooldown = 15;
-    public bool usedAbility;
+    public bool usedAbility = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        usedAbility = false;
+        //usedAbility = false;
     }
 
     void Update()
