@@ -11,6 +11,7 @@ public class Follow : MonoBehaviour
     void Start()
     {
         objectToFollow = GameObject.Find("Character");
+        moveSpeed = GameObject.Find("SolGameStats").GetComponent<SolGameStats>().enemyCircleSpeed;
     }
 
     // Update is called once per frame

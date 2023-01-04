@@ -15,6 +15,6 @@ public class LoadScene : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         Destroy(theCharacter);
         theTimer.GetComponent<Timer>().playing = true;
-        //destroy this game object
+        DontDestroyOnLoad(GameObject.Find("SolGameStats"));
     }
 }
