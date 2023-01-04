@@ -17,13 +17,19 @@ public class SolGameStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    void Update()
+    {
         spawnerOne = GameObject.Find("Spawner1");
         spawnerTwo = GameObject.Find("Spawner2");
         spawnerThree = GameObject.Find("Spawner3");
         spawnerFour = GameObject.Find("Spawner4");
         spawnerFive = GameObject.Find("Spawner5");
 
-        switch(gameDifficulty)
+
+        switch (gameDifficulty)
         {
             case "easy":
                 spawnerFive.SetActive(false);
@@ -38,11 +44,33 @@ public class SolGameStats : MonoBehaviour
                 enemyCircleSpeed = 1.5f;
                 enemyCircleSize = 1.0f;
                 break;
-            case "med":
+            case "medium":
                 spawnerFive.SetActive(false);
+                spawnerOne.GetComponent<RandomSpawner>().delay = 1;
+                spawnerOne.GetComponent<RandomSpawner>().repeat = 4;
+                spawnerTwo.GetComponent<RandomSpawner>().delay = 6;
+                spawnerTwo.GetComponent<RandomSpawner>().repeat = 4;
+                spawnerThree.GetComponent<RandomSpawner>().delay = 12;
+                spawnerThree.GetComponent<RandomSpawner>().repeat = 3;
+                spawnerFour.GetComponent<RandomSpawner>().delay = 18;
+                spawnerFour.GetComponent<RandomSpawner>().repeat = 3;
+                enemyCircleSpeed = 2.5f;
+                enemyCircleSize = 0.9f;
                 break;
             case "hard":
                 spawnerFive.SetActive(true);
+                spawnerOne.GetComponent<RandomSpawner>().delay = 1;
+                spawnerOne.GetComponent<RandomSpawner>().repeat = 3;
+                spawnerTwo.GetComponent<RandomSpawner>().delay = 6;
+                spawnerTwo.GetComponent<RandomSpawner>().repeat = 3;
+                spawnerThree.GetComponent<RandomSpawner>().delay = 12;
+                spawnerThree.GetComponent<RandomSpawner>().repeat = 3;
+                spawnerFour.GetComponent<RandomSpawner>().delay = 18;
+                spawnerFour.GetComponent<RandomSpawner>().repeat = 3;
+                spawnerFive.GetComponent<RandomSpawner>().delay = 24;
+                spawnerFive.GetComponent<RandomSpawner>().repeat = 3;
+                enemyCircleSpeed = 3.5f;
+                enemyCircleSize = 0.8f;
                 break;
         }
     }

@@ -8,13 +8,19 @@ public class LoadScene : MonoBehaviour
     public string thisScene;
     public GameObject theCharacter;
     private GameObject theTimer;
+
+
     public void sceneLoader(string sceneName) {
         theCharacter = GameObject.Find("Character");
         theTimer = GameObject.Find("TimerTest");
-        //thisScene = SceneManager.GetActiveScene().name;
+        DontDestroyOnLoad(GameObject.Find("SolGameStats"));
         SceneManager.LoadScene(sceneName);
         Destroy(theCharacter);
-        theTimer.GetComponent<Timer>().playing = true;
-        DontDestroyOnLoad(GameObject.Find("SolGameStats"));
+        //theTimer.GetComponent<Timer>().playing = true;
+    }
+
+    public void setDifficulty(string diff)
+    {
+        GameObject.Find("SolGameStats").GetComponent<SolGameStats>().gameDifficulty = diff;
     }
 }

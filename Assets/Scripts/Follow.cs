@@ -11,12 +11,13 @@ public class Follow : MonoBehaviour
     void Start()
     {
         objectToFollow = GameObject.Find("Character");
-        moveSpeed = GameObject.Find("SolGameStats").GetComponent<SolGameStats>().enemyCircleSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        moveSpeed = GameObject.Find("SolGameStats").GetComponent<SolGameStats>().enemyCircleSpeed;
+
         if (objectToFollow.activeSelf) {
             Vector3 movement = objectToFollow.transform.position;            
             transform.position = Vector3.MoveTowards(transform.position, movement, moveSpeed * Time.deltaTime);
