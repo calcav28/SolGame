@@ -14,13 +14,13 @@ public class Timer : MonoBehaviour
     {
         timerTime = 0.0f;
         goodTimerTime = 0;
-        playing = true;
+        //playing = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playing) {
+        if (GameObject.Find("Spawner1") != null) {
         timerTime += Time.deltaTime;
         }
         goodTimerTime = Mathf.FloorToInt(timerTime);
