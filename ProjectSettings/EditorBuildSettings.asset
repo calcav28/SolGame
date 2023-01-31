@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SolTitleScreen.unity
+    path: Assets/Scenes/SolScenes/SolTitleScreen.unity
     guid: f549c296c31ef4361bb94d4fcb71fc59
   - enabled: 1
-    path: Assets/Scenes/BasicMovement.unity
+    path: Assets/Scenes/SolScenes/BasicMovement.unity
     guid: 156c04c23c2354bf294e2cdad3ca89c2
   - enabled: 1
-    path: Assets/Scenes/DeathScreen.unity
+    path: Assets/Scenes/SolScenes/DeathScreen.unity
     guid: 00c23c3870fb04d2e90c1689137ef780
   m_configObjects: {}
