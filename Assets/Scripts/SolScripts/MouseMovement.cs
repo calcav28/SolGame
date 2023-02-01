@@ -27,6 +27,6 @@ public class MouseMovement : MonoBehaviour
             Vector3 movePosition = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
             placeToMove.transform.position = movePosition;
         }
-        transform.position = Vector3.MoveTowards(transform.position, placeToMove.transform.position, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, placeToMove.transform.position, moveSpeed); //* Time.deltaTime);
     }
 }
