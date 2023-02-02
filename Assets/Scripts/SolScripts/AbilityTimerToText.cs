@@ -57,7 +57,7 @@ public class AbilityTimerToText : MonoBehaviour
         {
         case "2ETime": 
             if (eNumber == 10) {
-                displayText.text = "Ready!";
+                displayText.text = "";
             } else {
                     eNumberCountdown = Mathf.FloorToInt(eNumberCountdown);
                     displayText.text = eNumberCountdown.ToString();
