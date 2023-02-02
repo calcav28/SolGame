@@ -26,7 +26,7 @@ public class IconInteraction : MonoBehaviour
         abilityUsed = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().usedAbility;
         if ((Input.GetKeyDown(firstKey) || Input.GetKeyDown(secondKey)) && abilityUsed)
         {
-            barImage.GetComponent<AbilityDurationBar>().setCooldown();
+            barImage.GetComponent<AbilityDurationBar>().cooldownTimer = 5.0f;
             imageColor.a = changedAlpha;
             mainImage.color = imageColor;
             Invoke("resetAlpha", 10.0f);

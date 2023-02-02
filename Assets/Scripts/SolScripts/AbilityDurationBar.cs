@@ -8,10 +8,11 @@ public class AbilityDurationBar : MonoBehaviour
     public Image cooldownImage;
     public float cooldownTime = 5.0f;
     public float cooldownTimer = 0.0f;
+    public float thisIsATest;
     // Start is called before the first frame update
     void Start()
     {
-        
+        cooldownImage.fillAmount = cooldownTimer;
     }
 
     // Update is called once per frame
@@ -19,10 +20,6 @@ public class AbilityDurationBar : MonoBehaviour
     {
         if (cooldownTimer > 0)
         {
-            if (cooldownTimer == 0)
-            {
-                cooldownTimer = 0;
-            }
             cooldownTimer -= Time.deltaTime;
             cooldownImage.fillAmount = cooldownTimer / cooldownTime;
         }
