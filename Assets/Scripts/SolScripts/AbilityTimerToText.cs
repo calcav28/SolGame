@@ -66,7 +66,7 @@ public class AbilityTimerToText : MonoBehaviour
 
         case "3RTime":
             if (rNumber == 10) {
-                displayText.text = "Ready!";
+                displayText.text = "";
             } else {
                     rNumberCountdown = Mathf.FloorToInt(rNumberCountdown);
                     displayText.text = rNumberCountdown.ToString();
@@ -75,7 +75,7 @@ public class AbilityTimerToText : MonoBehaviour
 
         case "4TTime":
             if (tNumber == 15) {
-                displayText.text = "Ready!";
+                displayText.text = "";
             } else {
                     tNumberCountdown = Mathf.FloorToInt(tNumberCountdown);
                     displayText.text = tNumberCountdown.ToString();

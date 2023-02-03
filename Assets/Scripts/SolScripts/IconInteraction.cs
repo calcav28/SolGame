@@ -12,8 +12,8 @@ public class IconInteraction : MonoBehaviour
     public KeyCode secondKey;
     public bool abilityUsed;
     public Color imageColor;
-    public float mainAlpha;
-    public float changedAlpha;
+    private float mainAlpha = 1.0f;
+    private float changedAlpha = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
