@@ -33,12 +33,16 @@ public class SolGameStats : MonoBehaviour
         switch (gameDifficulty)
         {
             case "easy":
+                enemyRepeat = 7.0f;
                 spawnerFive.SetActive(false);
                 spawnerOne.GetComponent<RandomSpawner>().delay = 2;
                 spawnerTwo.GetComponent<RandomSpawner>().delay = 10;
                 spawnerThree.GetComponent<RandomSpawner>().delay = 20;
                 spawnerFour.GetComponent<RandomSpawner>().delay = 30;
-                enemyRepeat = 7.0f;
+                spawnerOne.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerTwo.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerThree.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerFour.GetComponent<RandomSpawner>().repeat = enemyRepeat;
                 enemyCircleSpeed = 2.0f;
                 enemyCircleSize = 1.0f;
                 break;

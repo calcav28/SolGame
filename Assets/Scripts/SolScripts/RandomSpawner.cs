@@ -16,7 +16,7 @@ public class RandomSpawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("spawnObjectAtRandom", delay, getRepeat());
+        InvokeRepeating("spawnObjectAtRandom", delay, repeat);
     }
 
     void spawnObjectAtRandom() {
@@ -25,8 +25,4 @@ public class RandomSpawner : MonoBehaviour
         Instantiate(circle, randomPosit, Quaternion.identity);
     }
 
-    float getRepeat()
-    {
-        return GameObject.Find("SolGameStats").GetComponent<SolGameStats>().enemyRepeat;
-    }
 }
