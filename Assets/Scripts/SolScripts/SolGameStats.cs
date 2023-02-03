@@ -47,23 +47,32 @@ public class SolGameStats : MonoBehaviour
                 enemyCircleSize = 1.0f;
                 break;
             case "medium":
+                enemyRepeat = 5.0f;
                 spawnerFive.SetActive(false);
                 spawnerOne.GetComponent<RandomSpawner>().delay = 1;
                 spawnerTwo.GetComponent<RandomSpawner>().delay = 6;
                 spawnerThree.GetComponent<RandomSpawner>().delay = 12;
                 spawnerFour.GetComponent<RandomSpawner>().delay = 18;
-                enemyRepeat = 5.0f;
+                spawnerOne.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerTwo.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerThree.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerFour.GetComponent<RandomSpawner>().repeat = enemyRepeat;
                 enemyCircleSpeed = 2.5f;
                 enemyCircleSize = 0.9f;
                 break;
             case "hard":
+                enemyRepeat = 3.5f;
                 spawnerFive.SetActive(true);
                 spawnerOne.GetComponent<RandomSpawner>().delay = 1;
                 spawnerTwo.GetComponent<RandomSpawner>().delay = 6;
                 spawnerThree.GetComponent<RandomSpawner>().delay = 12;
                 spawnerFour.GetComponent<RandomSpawner>().delay = 18;
                 spawnerFive.GetComponent<RandomSpawner>().delay = 24;
-                enemyRepeat = 3.5f;
+                spawnerOne.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerTwo.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerThree.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerFour.GetComponent<RandomSpawner>().repeat = enemyRepeat;
+                spawnerFive.GetComponent<RandomSpawner>().repeat = enemyRepeat;
                 enemyCircleSpeed = 3.5f;
                 enemyCircleSize = 0.8f;
                 break;
