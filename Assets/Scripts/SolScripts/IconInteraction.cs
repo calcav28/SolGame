@@ -11,9 +11,10 @@ public class IconInteraction : MonoBehaviour
     public KeyCode firstKey;
     public KeyCode secondKey;
     public bool abilityUsed;
-    public Color imageColor;
+    private Color imageColor;
     private float mainAlpha = 1.0f;
     private float changedAlpha = 0.5f;
+    public float abilityCooldown;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class IconInteraction : MonoBehaviour
             barImage.GetComponent<AbilityDurationBar>().cooldownTimer = 5.0f;
             imageColor.a = changedAlpha;
             mainImage.color = imageColor;
-            Invoke("resetAlpha", 10.0f);
+            Invoke("resetAlpha", abilityCooldown);
         }
     }
 

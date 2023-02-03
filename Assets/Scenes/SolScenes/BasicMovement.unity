@@ -2703,6 +2703,7 @@ MonoBehaviour:
   secondKey: 101
   abilityUsed: 0
   imageColor: {r: 0, g: 0, b: 0, a: 0}
+  abilityCooldown: 10
 --- !u!1 &1185637247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3773,6 +3774,7 @@ MonoBehaviour:
   secondKey: 116
   abilityUsed: 0
   imageColor: {r: 0, g: 0, b: 0, a: 0}
+  abilityCooldown: 15
 --- !u!1 &1672889902
 GameObject:
   m_ObjectHideFlags: 0
@@ -5545,6 +5547,7 @@ MonoBehaviour:
   secondKey: 114
   abilityUsed: 0
   imageColor: {r: 0, g: 0, b: 0, a: 0}
+  abilityCooldown: 10
 --- !u!1001 &4780739484010461669
 PrefabInstance:
   m_ObjectHideFlags: 0
