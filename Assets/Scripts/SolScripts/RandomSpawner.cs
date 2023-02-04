@@ -9,6 +9,7 @@ public class RandomSpawner : MonoBehaviour
     public float delay;
     public float repeat;
     
+    //allows first game from start of session to load proper repeat depending on difficulty
     void Awake()
     {
         repeat = GameObject.Find("SolGameStats").GetComponent<SolGameStats>().enemyRepeat;

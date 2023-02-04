@@ -1014,7 +1014,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 582530930}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: sceneLoader
+        m_MethodName: generalSceneLoader
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1515,7 +1515,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1383059938}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: sceneLoader
+        m_MethodName: solSceneLoader
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

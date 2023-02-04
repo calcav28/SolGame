@@ -9,8 +9,13 @@ public class LoadScene : MonoBehaviour
     public GameObject theCharacter;
     private GameObject theTimer;
 
+    public void generalSceneLoader(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 
-    public void sceneLoader(string sceneName) {
+
+    public void solSceneLoader(string sceneName) {
         theCharacter = GameObject.Find("Character");
         theTimer = GameObject.Find("TimerTest");
         DontDestroyOnLoad(GameObject.Find("SolGameStats"));
