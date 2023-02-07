@@ -30,7 +30,7 @@ public class DieOnImpact : MonoBehaviour
             !isInvulnerable)
         { //if certain boolean is also true, do this, set boolean to false when pressing spacebar for 5 seconds
             GameObject.Find("TimerTest").GetComponent<Timer>().playing = false;
-            SceneManager.LoadScene("DeathScreen");
+            SceneManager.LoadScene("SolDeathScreen");
             DontDestroyOnLoad(charac);
             DontDestroyOnLoad(ourTime);
             DontDestroyOnLoad(theHighScore);
