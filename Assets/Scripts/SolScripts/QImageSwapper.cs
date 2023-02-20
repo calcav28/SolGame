@@ -10,7 +10,6 @@ public class QImageSwapper : MonoBehaviour
     public GameObject otherImage;
     public KeyCode firstKey;
     public KeyCode secondKey;
-    //public bool isClockwise = false;
     // Start is called before the first frame update
     void Start()
     {
