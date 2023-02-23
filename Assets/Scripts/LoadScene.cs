@@ -9,8 +9,12 @@ public class LoadScene : MonoBehaviour
     public GameObject theCharacter;
     private GameObject theTimer;
 
+    //when stuff starts to break with loading scenes and stuff (especially loading back to the title screen),
+    //you will need to implement the singleton pattern to ensure stuff doesn't break
     public void generalSceneLoader(string sceneName)
     {
+        DontDestroyOnLoad(GameObject.Find("GlobalScripts"));
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
 
@@ -18,14 +22,16 @@ public class LoadScene : MonoBehaviour
     public void solSceneLoader(string sceneName) {
         theCharacter = GameObject.Find("Character");
         theTimer = GameObject.Find("TimerTest");
-        DontDestroyOnLoad(GameObject.Find("SolGameStats"));
+        DontDestroyOnLoad(GameObject.Find("GlobalScripts"));
         SceneManager.LoadScene(sceneName);
         Destroy(theCharacter);
+        Time.timeScale = 1;
         //theTimer.GetComponent<Timer>().playing = true;
     }
 
     public void setDifficulty(string diff)
     {
-        GameObject.Find("SolGameStats").GetComponent<SolGameStats>().gameDifficulty = diff;
+        GameObject.Find("GlobalScripts").GetComponent<SolGameStats>().gameDifficulty = diff;
+        DontDestroyOnLoad(GameObject.Find("GlobalScripts"));
     }
 }

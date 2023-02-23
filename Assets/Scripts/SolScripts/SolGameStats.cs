@@ -14,13 +14,6 @@ public class SolGameStats : MonoBehaviour
     public float enemyCircleSpeed;
     public float enemyCircleSize;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         spawnerOne = GameObject.Find("Spawner1");

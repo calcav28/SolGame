@@ -7,20 +7,16 @@ public class Follow : MonoBehaviour
 
     public float moveSpeed;
     public GameObject objectToFollow;
-    // Start is called before the first frame update
-    void Start()
-    {
-        objectToFollow = GameObject.Find("Character");
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
-        moveSpeed = GameObject.Find("SolGameStats").GetComponent<SolGameStats>().enemyCircleSpeed;
+        objectToFollow = GameObject.Find("Character");
+        moveSpeed = GameObject.Find("GlobalScripts").GetComponent<SolGameStats>().enemyCircleSpeed;
 
-        if (objectToFollow.activeSelf) {
+      //  if (objectToFollow.activeSelf) {
             Vector3 movement = objectToFollow.transform.position;            
             transform.position = Vector3.MoveTowards(transform.position, movement, moveSpeed * Time.deltaTime);
-        } 
+//        } 
     }
 }

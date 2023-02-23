@@ -12,7 +12,7 @@ public class RandomSpawner : MonoBehaviour
     //allows first game from start of session to load proper repeat depending on difficulty
     void Awake()
     {
-        repeat = GameObject.Find("SolGameStats").GetComponent<SolGameStats>().enemyRepeat;
+        repeat = GameObject.Find("GlobalScripts").GetComponent<SolGameStats>().enemyRepeat;
     }
 
     void Start()

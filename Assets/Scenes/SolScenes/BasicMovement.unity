@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437583026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aa064b8ec34cf947a618c7e84d470a2, type: 3}
   m_Name: 
@@ -6772,7 +6772,7 @@ PrefabInstance:
       objectReference: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
     - target: {fileID: 4780739483911079254, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4780739483911079260, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
       propertyPath: invulnCircle
