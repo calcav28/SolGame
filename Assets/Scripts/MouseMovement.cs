@@ -30,6 +30,5 @@ public class MouseMovement : MonoBehaviour
             //placeToMove.MovePosition(Vector2.MoveTowards(rb.position, movePosition, moveSpeed * Time.deltaTime));
             placeToMove.transform.position = movePosition;
         }
-        //transform.position = Vector2.MoveTowards(transform.position, placeToMove.transform.position, moveSpeed * Time.deltaTime);
     }
 }
