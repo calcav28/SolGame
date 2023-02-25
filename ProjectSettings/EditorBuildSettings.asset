@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SolScenes/SolDeathScreen.unity
     guid: 00c23c3870fb04d2e90c1689137ef780
+  - enabled: 1
+    path: Assets/Scenes/SkillScenes/SkillGame.unity
+    guid: 6729f499628651a43827bac6c933c6f5
+  - enabled: 1
+    path: Assets/Scenes/SkillScenes/SkillTitleScreen.unity
+    guid: 232d487de82e88d4296d9f078de636a8
   m_configObjects: {}
