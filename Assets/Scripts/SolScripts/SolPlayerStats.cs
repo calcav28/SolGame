@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
+[System.Serializable]
 public class SolPlayerStats : MonoBehaviour
 {
     public bool typeOfMovement;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public int testInt;
+    /*
+    public int solEasyHighScore;
+    public int solMedHighScore;
+    public int solHardHighScore;
+    public int solGamesPlayed;
+    public int solPoints;
+    */
 }

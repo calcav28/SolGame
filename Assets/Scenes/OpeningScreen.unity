@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 78584168}
   - component: {fileID: 78584167}
   - component: {fileID: 78584166}
+  - component: {fileID: 78584172}
   m_Layer: 0
   m_Name: GlobalScripts
   m_TagString: Untagged
@@ -182,6 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563afb84d0da3453a973c1c30a362537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillGameType: 
+  skillGameDifficulty: 
 --- !u!114 &78584169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeOfMovement: 0
+  testInt: 0
 --- !u!114 &78584170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +235,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &78584172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78584165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2829adc1b0da8a34199a348c4231ab30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &910878511
 GameObject:
   m_ObjectHideFlags: 0
