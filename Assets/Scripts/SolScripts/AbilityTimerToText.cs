@@ -14,7 +14,7 @@ public class AbilityTimerToText : MonoBehaviour
     public GameObject circleDude;
     public TMP_Text displayText;
     public string compareText;
-    // Start is called before the first frame update
+
     void Start()
     {
         compareText = displayText.text;
@@ -26,7 +26,6 @@ public class AbilityTimerToText : MonoBehaviour
         tNumberCountdown = 15;
     }
 
-    // Update is called once per frame
     void Update()
     {
         eNumber = circleDude.GetComponent<RotateAroundPoint>().ballSizeTimer;

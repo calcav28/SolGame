@@ -10,13 +10,7 @@ public class QImageSwapper : MonoBehaviour
     public GameObject otherImage;
     public KeyCode firstKey;
     public KeyCode secondKey;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if ((Input.GetKeyDown(firstKey) || Input.GetKeyDown(secondKey)) && mainImage.activeSelf)

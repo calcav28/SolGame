@@ -8,6 +8,7 @@ public class EndTimeScore : MonoBehaviour
     private int theTime = 0;
     private TMP_Text theText;
     private GameObject giveTheScoreBaby;
+    
     void Start()
     {
         giveTheScoreBaby = GameObject.Find("TimerTest");

@@ -15,13 +15,12 @@ public class IconInteraction : MonoBehaviour
     private float mainAlpha = 1.0f;
     private float changedAlpha = 0.5f;
     public float abilityCooldown;
-    // Start is called before the first frame update
+
     void Start()
     {
         imageColor = mainImage.color;
     }
 
-    // Update is called once per frame
     void Update()
     {
         abilityUsed = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().usedAbility;

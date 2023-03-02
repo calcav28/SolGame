@@ -24,7 +24,6 @@ public class NumberToText : MonoBehaviour
         characterObject = GameObject.Find("Character");
     }
     
-    // Update is called once per frame
     void Update()
     {
         one = circleOne.GetComponent<DestroyObject>().ballsHit;

@@ -5,12 +5,11 @@ using TMPro;
 
 public class HighScoreToText : MonoBehaviour
 {
-
     public GameObject scoreObject;
     public TMP_Text highScoreText;
     public int theMainHighScore;
     public int thePreviousHighScore;
-    // Start is called before the first frame update
+    
     void Start()
     {
         scoreObject = GameObject.Find("HighScoreTest");
@@ -23,12 +22,6 @@ public class HighScoreToText : MonoBehaviour
         } else {
             highScoreText.text = thePreviousHighScore.ToString();
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
     

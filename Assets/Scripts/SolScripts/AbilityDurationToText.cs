@@ -29,7 +29,8 @@ public class AbilityDurationToText : MonoBehaviour
     }
 }
 
-    
+    //please fix this bro, you don't have to do this (and make it so you can have any countdown)
+
     public void TimerDown() {
         myText.text = "Time Remaining: 5";
         Invoke("Timer4", 1);

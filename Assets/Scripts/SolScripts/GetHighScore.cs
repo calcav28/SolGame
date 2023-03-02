@@ -43,6 +43,5 @@ public class GetHighScore : MonoBehaviour
             mainHighScore = all;
         }
 
-        //theText.text = mainHighScore.ToString();
     }
 }

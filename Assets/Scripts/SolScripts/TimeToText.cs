@@ -8,7 +8,7 @@ public class TimeToText : MonoBehaviour
     public GameObject timerThing;
     public TMP_Text timerText;
     public int timee;
-    // Start is called before the first frame update
+
     void Start()
     {
         timerThing = GameObject.Find("TimerTest");
@@ -16,11 +16,5 @@ public class TimeToText : MonoBehaviour
         timee = timerThing.GetComponent<Timer>().goodTimerTime;
         timerText.text = timee.ToString();
         timerThing.GetComponent<Timer>().timerTime = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
