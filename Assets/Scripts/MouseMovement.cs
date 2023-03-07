@@ -9,22 +9,36 @@ public class MouseMovement : MonoBehaviour
     public Camera cam;
     public Rigidbody2D rb;
     public GameObject placeToMove;
-    void Start()
+    public bool canMove;
+    public Vector2 movePosition;
+    void Awake()
     {
-
+        canMove = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = new Quaternion(0, 0, 0, 0);
-        transform.position = Vector3.MoveTowards(rb.position, placeToMove.transform.position, moveSpeed * Time.deltaTime);
+        if (canMove)
+        {
+            transform.position = Vector3.MoveTowards(rb.position, placeToMove.transform.position, moveSpeed * Time.deltaTime);
+        }
+
         if (Input.GetMouseButtonDown(1))
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            Vector2 movePosition = new Vector2(mousePos.x, mousePos.y);
+            movePosition = new Vector2(mousePos.x, mousePos.y);
             placeToMove.transform.position = movePosition;
         }
+    }
+
+    void FixedUpdate()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 aimDirection = mousePos - rb.position;
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x)
+            * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
 }

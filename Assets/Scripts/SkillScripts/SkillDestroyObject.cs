@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkillDestroyObject : MonoBehaviour
 {
     public GameObject thisBall;
+    public float shotSpeed = 20;
     private void OnCollisionEnter2D(Collision2D coll)
     {
         if ((coll.gameObject != GameObject.Find("Wall (3)")) &&
