@@ -19,7 +19,7 @@ public class ShootSkillShot : MonoBehaviour
     void Update()
     {
 
-        if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Q)) && offCooldown)
+        if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Q) || Input.GetMouseButtonDown(0)) && offCooldown)
         {
             Invoke("resetMoveSpeed", 0.5f);
             Invoke("useSkillShot", 0.25f);
