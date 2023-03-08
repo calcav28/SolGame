@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class GeneralPlayerData : MonoBehaviour
 {
-    /*
     public int superPoints;
     public int solProPoints;
     public int skillProPoints;
     public int stealthProPoints;
-    */
+    
 }
