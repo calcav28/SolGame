@@ -14,13 +14,17 @@ public class SolPlayerStats : MonoBehaviour
     public int solHardHighScore;
     public int solGamesPlayed;
 
-    void Update()
+    public bool solHasQAbility;
+    public bool solHasEAbility;
+    public bool solHasRAbility;
+
+    void Awake()
     {
          setMovementType();
     }
 
 
-    void setMovementType()
+    public void setMovementType()
     {
         if(GameObject.Find("WASDMovement").activeSelf)
         {
@@ -29,6 +33,19 @@ public class SolPlayerStats : MonoBehaviour
         if (GameObject.Find("RightClickMovement").activeSelf)
         {
             wasdMovement = false;
+        }
+    }
+
+    public void solBuyItem(string itemToActivate)
+    {
+        switch (itemToActivate)
+        {
+            case "qAbilityActivate":
+                solHasQAbility = true;
+                break;
+            case "eAbilityActivate":
+                solHasEAbility = true;
+                break;
         }
     }
 }

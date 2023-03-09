@@ -9,8 +9,14 @@ public class BuyItem : MonoBehaviour
     public GameObject nextItemToPurchase;
     public int pointsToBuy;
     public string pointsToUse;
+    public SolPlayerStats solStuff;
 
-    void buyItem()
+    void Awake()
+    {
+        solStuff = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
+    }
+
+    public void buyItem(bool itemToActivate)
     {
         switch (pointsToUse)
         {
@@ -18,7 +24,7 @@ public class BuyItem : MonoBehaviour
                 if (GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerData>().superPoints >= pointsToBuy)
                 {
                     GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerData>().superPoints -= pointsToBuy;
-                    //set appropriate boolean to true
+                    itemToActivate = true; //this will be the item in question player buys
                     itemToPurchase.SetActive(false);
                     nextItemToPurchase.SetActive(true);
                 } else
@@ -27,7 +33,17 @@ public class BuyItem : MonoBehaviour
                 }
                 break;
             case "solProPoints":
-                //code here
+                if (GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerData>().solProPoints >= pointsToBuy)
+                {
+                    GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerData>().solProPoints -= pointsToBuy;
+                    itemToActivate = true; //this will be the item in question player buys
+                    itemToPurchase.SetActive(false);
+                    nextItemToPurchase.SetActive(true);
+                }
+                else
+                {
+                    //display text showing how many points needed to get item
+                }
                 break;
             case "skillProPoints":
                 //code here
