@@ -6,7 +6,6 @@ public class MouseMovement : MonoBehaviour
 {
 
     public float moveSpeed;
-    public Camera cam;
     public Rigidbody2D rb;
     public GameObject placeToMove;
     public bool canMove;
