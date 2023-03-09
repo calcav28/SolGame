@@ -3,10 +3,10 @@
 Super Minigame Pros is an arcade-style game comprised of small, esay to play games.
 
 ## Sol
-Sol is a 2d game that has mechanics similar to the champion from League of Legends, Aurelion Sol. You play as a rectangle with three circles orbiting you. Your goal is to avoid touching your rectangle from the enemy circles while hitting the red circles with your orbiting blue circles.
+Sol is a 2d game where you must protect yourself from enemies using your orbiting circles. 
 
 ## Skillshot
-Skillshot is a 2d game where you can test how good you are with League of Legends type skillshots!
+Skillshot is a 2d arcade-shooter where you can see how goo you are with skillshots!
 
 ## Stealth
-Stealth is a 2d action-stealth hybrid game.
+Stealth is a 2d action-stealth hybrid game. In stealth, you must keep out of the sight of enemies while dispatching as many of them as you can. 
