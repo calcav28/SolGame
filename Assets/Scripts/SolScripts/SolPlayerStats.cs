@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class SolPlayerStats : MonoBehaviour
 {
     public bool wasdMovement;
-    public int testInt;
     public int solEasyHighScore;
     public int solEasyTime;
     public int solMedHighScore;

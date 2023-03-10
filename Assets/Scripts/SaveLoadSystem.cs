@@ -24,14 +24,22 @@ public class SaveLoadSystem : MonoBehaviour
 
     public void loadFromJson()
     {
+        //solScript Loading
         string json = File.ReadAllText(Application.dataPath + "/solStats.json");
         SolPlayerStats jsonSolStats = JsonUtility.FromJson<SolPlayerStats>(json);
-        //make script in global scripts be this script
 
-        //checking for abilities
+        //loading abilities
         solStats.solHasQAbility = jsonSolStats.solHasQAbility;
         solStats.solHasEAbility = jsonSolStats.solHasEAbility;
         solStats.solHasRAbility = jsonSolStats.solHasRAbility;
         solStats.solHasFAbility = jsonSolStats.solHasFAbility;
+
+        //loading scores
+        solStats.solEasyHighScore = jsonSolStats.solEasyHighScore;
+        solStats.solEasyTime = jsonSolStats.solEasyTime;
+        solStats.solMedHighScore = jsonSolStats.solMedHighScore;
+        solStats.solMedTime = jsonSolStats.solMedTime;
+        solStats.solHardHighScore = jsonSolStats.solHardHighScore;
+        solStats.solHardTime = jsonSolStats.solHardTime;
     }
 }

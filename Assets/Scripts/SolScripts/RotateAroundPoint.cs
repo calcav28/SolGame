@@ -13,11 +13,26 @@ public class RotateAroundPoint : MonoBehaviour
     public float ballSizeCooldown = 10;
     public float ballSpeedCooldown = 10;
     public float ballUltCooldown = 15;
-    public bool usedAbility = false; 
+    public bool usedAbility = false;
+    public bool hasBallRotation;
+    public bool hasBallSize;
+    public bool hasBallSpeed;
+    public bool hasBallUlt;
     
     void Awake()
     {
-        //handle getting keybinds for player
+        //handle getting keybinds for player plus booleans for abilities
+
+
+        //abilities:
+        hasBallRotation = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasQAbility;
+        hasBallSize = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasEAbility;
+        hasBallSpeed = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasRAbility;
+        hasBallUlt = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasFAbility;
+
+        //ability upgrades:
+
+        //keybinds:
     }
 
     void Update()
@@ -35,12 +50,13 @@ public class RotateAroundPoint : MonoBehaviour
         //eventually change to implement keybind system
         
         //changes rotation, 1/Q
-        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Q)) {
+        if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Q)) && hasBallRotation) {
             rotationSpeed = rotationSpeed * -1.0f;
         }
 
         //makes balls bigger, 2/E
-        if ((Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.E)) && ballSizeTimer >= 10.0f) {
+        if ((Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.E)) && hasBallSize
+            && ballSizeTimer >= 10.0f) {
             usedAbility = true;
             ballSizeTimer = 0;
             gameObject.transform.localScale += new Vector3(1.25f, 1.25f, 1f);
@@ -49,7 +65,8 @@ public class RotateAroundPoint : MonoBehaviour
         }
 
         //makes balls rotate faster, 3/R
-        if ((Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.R)) && ballSpeedTimer >= 10.0f) {
+        if ((Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.R)) && hasBallSpeed
+            && ballSpeedTimer >= 10.0f) {
             usedAbility = true;
             ballSpeedTimer = 0;
             rotationSpeed = rotationSpeed * 2.0f;
@@ -58,7 +75,8 @@ public class RotateAroundPoint : MonoBehaviour
         }
         
         //ultimate ability, 4/F,
-        if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.F)) && ballUltTimer >= 15.0f) {
+        if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.F)) && hasBallUlt
+            && ballUltTimer >= 15.0f) {
             usedAbility = true;
             ballUltTimer = 0;
             rotationSpeed = rotationSpeed * 2.5f;
