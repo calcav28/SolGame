@@ -13,8 +13,12 @@ public class RotateAroundPoint : MonoBehaviour
     public float ballSizeCooldown = 10;
     public float ballSpeedCooldown = 10;
     public float ballUltCooldown = 15;
-    public bool usedAbility = false;
+    public bool usedAbility = false; 
     
+    void Awake()
+    {
+        //handle getting keybinds for player
+    }
 
     void Update()
     {
@@ -27,6 +31,8 @@ public class RotateAroundPoint : MonoBehaviour
         ballSpeedTimer += Time.deltaTime;
         ballUltTimer += Time.deltaTime;
         
+
+        //eventually change to implement keybind system
         
         //changes rotation, 1/Q
         if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Q)) {
@@ -51,8 +57,8 @@ public class RotateAroundPoint : MonoBehaviour
             Invoke("resetBallSpeed", 5.0f);
         }
         
-        //ultimate ability, 4/T, maybe change to F?
-        if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.T)) && ballUltTimer >= 15.0f) {
+        //ultimate ability, 4/F,
+        if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.F)) && ballUltTimer >= 15.0f) {
             usedAbility = true;
             ballUltTimer = 0;
             rotationSpeed = rotationSpeed * 2.5f;

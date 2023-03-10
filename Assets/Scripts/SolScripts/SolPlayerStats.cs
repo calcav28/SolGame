@@ -10,13 +10,17 @@ public class SolPlayerStats : MonoBehaviour
     public bool wasdMovement;
     public int testInt;
     public int solEasyHighScore;
+    public int solEasyTime;
     public int solMedHighScore;
+    public int solMedTime;
     public int solHardHighScore;
+    public int solHardTime;
     public int solGamesPlayed;
 
     public bool solHasQAbility;
     public bool solHasEAbility;
     public bool solHasRAbility;
+    public bool solHasFAbility;
 
     void Awake()
     {

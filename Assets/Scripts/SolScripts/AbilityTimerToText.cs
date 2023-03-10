@@ -7,10 +7,10 @@ public class AbilityTimerToText : MonoBehaviour
 {
     public float eNumber = 10;
     public float rNumber = 10;
-    public float tNumber = 15;
+    public float fNumber = 15;
     public float eNumberCountdown;
     public float rNumberCountdown;
-    public float tNumberCountdown;
+    public float fNumberCountdown;
     public GameObject circleDude;
     public TMP_Text displayText;
     public string compareText;
@@ -20,10 +20,10 @@ public class AbilityTimerToText : MonoBehaviour
         compareText = displayText.text;
         eNumber = 10;
         rNumber = 10;
-        tNumber = 15;
+        fNumber = 15;
         eNumberCountdown = 10;
         rNumberCountdown = 10;
-        tNumberCountdown = 15;
+        fNumberCountdown = 15;
     }
 
     void Update()
@@ -39,18 +39,18 @@ public class AbilityTimerToText : MonoBehaviour
         if (rNumber >= 10) {
             rNumber = 10;
         }
-        tNumber = circleDude.GetComponent<RotateAroundPoint>().ballUltTimer;
-        tNumber = Mathf.FloorToInt(tNumber);
-        if (tNumber >= 15) {
-            tNumber = 15;
+        fNumber = circleDude.GetComponent<RotateAroundPoint>().ballUltTimer;
+        fNumber = Mathf.FloorToInt(fNumber);
+        if (fNumber >= 15) {
+            fNumber = 15;
         }
 
         eNumberCountdown = circleDude.GetComponent<RotateAroundPoint>().ballSizeCooldown;
         eNumberCountdown -= eNumber;
         rNumberCountdown = circleDude.GetComponent<RotateAroundPoint>().ballSpeedCooldown;
         rNumberCountdown -= rNumber;
-        tNumberCountdown = circleDude.GetComponent<RotateAroundPoint>().ballUltCooldown;
-        tNumberCountdown -= tNumber;
+        fNumberCountdown = circleDude.GetComponent<RotateAroundPoint>().ballUltCooldown;
+        fNumberCountdown -= fNumber;
 
         switch (compareText)
         {
@@ -72,12 +72,12 @@ public class AbilityTimerToText : MonoBehaviour
             }
             break;
 
-        case "4TTime":
-            if (tNumber == 15) {
+        case "4FTime":
+            if (fNumber == 15) {
                 displayText.text = "";
             } else {
-                    tNumberCountdown = Mathf.FloorToInt(tNumberCountdown);
-                    displayText.text = tNumberCountdown.ToString();
+                    fNumberCountdown = Mathf.FloorToInt(fNumberCountdown);
+                    displayText.text = fNumberCountdown.ToString();
             }
             break;
 

@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 93370506}
   - component: {fileID: 93370505}
   m_Layer: 5
-  m_Name: '4T:'
+  m_Name: '4F:'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '4/T
+  m_text: '4/F
 
 '
   m_isRightToLeft: 0
@@ -554,10 +554,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eNumber: 10
   rNumber: 10
-  tNumber: 15
+  fNumber: 15
   eNumberCountdown: 0
   rNumberCountdown: 0
-  tNumberCountdown: 0
+  fNumberCountdown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 141764872}
   compareText: 
@@ -1387,10 +1387,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eNumber: 10
   rNumber: 10
-  tNumber: 15
+  fNumber: 15
   eNumberCountdown: 0
   rNumberCountdown: 0
-  tNumberCountdown: 0
+  fNumberCountdown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 374990119}
   compareText: 
@@ -1545,10 +1545,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eNumber: 10
   rNumber: 10
-  tNumber: 15
+  fNumber: 15
   eNumberCountdown: 0
   rNumberCountdown: 0
-  tNumberCountdown: 0
+  fNumberCountdown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 423677070}
   compareText: 
@@ -2212,10 +2212,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eNumber: 10
   rNumber: 10
-  tNumber: 15
+  fNumber: 15
   eNumberCountdown: 0
   rNumberCountdown: 0
-  tNumberCountdown: 0
+  fNumberCountdown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 663228479}
   compareText: 
@@ -2465,7 +2465,7 @@ GameObject:
   - component: {fileID: 764613461}
   - component: {fileID: 764613460}
   m_Layer: 5
-  m_Name: 4/TDurationBar
+  m_Name: 4/FDurationBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4535,7 +4535,7 @@ GameObject:
   - component: {fileID: 1647168696}
   - component: {fileID: 1647168698}
   m_Layer: 5
-  m_Name: 4/TImage
+  m_Name: 4/FImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5163,10 +5163,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eNumber: 10
   rNumber: 10
-  tNumber: 15
+  fNumber: 15
   eNumberCountdown: 0
   rNumberCountdown: 0
-  tNumberCountdown: 0
+  fNumberCountdown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 1864178344}
   compareText: 
@@ -5614,10 +5614,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eNumber: 10
   rNumber: 10
-  tNumber: 15
+  fNumber: 15
   eNumberCountdown: 0
   rNumberCountdown: 0
-  tNumberCountdown: 0
+  fNumberCountdown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 1944163272}
   compareText: 
@@ -5804,7 +5804,7 @@ GameObject:
   - component: {fileID: 1978274762}
   - component: {fileID: 1978274764}
   m_Layer: 5
-  m_Name: 4TTime
+  m_Name: 4FTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5850,7 +5850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4TTime
+  m_text: 4FTime
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5941,10 +5941,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eNumber: 10
   rNumber: 10
-  tNumber: 15
+  fNumber: 15
   eNumberCountdown: 0
   rNumberCountdown: 0
-  tNumberCountdown: 0
+  fNumberCountdown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 1978274762}
   compareText: 
