@@ -4,15 +4,51 @@ using UnityEngine;
 
 public class SkillAbilities : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public float qSpeed;
+    public float qCooldown;
+    public float wSpeed;
+    public float eSpeed;
+    public float rSpeed;
+
+
+    void Update() {
+
+        //shoot skillshot
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            useQ();
+        }
+
+        //movement speed boost
+        if (Input.GetKeyDown(KeyCode.W)) {
+            useW();
+        }
+
+        //dash ability
+        if (Input.GetKeyDown(KeyCode.E)) {
+            useE();
+        }
+
+        //ultimate ability
+        if (Input.GetKeyDown(KeyCode.R)) {
+            useR();
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+    void useQ() {
+
+    }
+
+    void useW() {
+
+    }
+
+    void useE() {
+
+    }
+
+    void useR() {
+
     }
 }

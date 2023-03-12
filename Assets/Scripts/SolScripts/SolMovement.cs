@@ -35,6 +35,7 @@ public class SolMovement : MonoBehaviour
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
             movePosition = new Vector2(mousePos.x, mousePos.y);
             placeToMove.transform.position = movePosition;
+            transform.rotation = new Quaternion(0, 0, 0, 0);
         }
     }
 }

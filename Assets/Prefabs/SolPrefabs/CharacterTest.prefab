@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270991415663413266}
   - component: {fileID: 4780739483911079249}
-  - component: {fileID: 4780739483911079254}
   - component: {fileID: 4780739483911079261}
-  - component: {fileID: 4780739483911079250}
   - component: {fileID: 4780739483911079251}
   - component: {fileID: 4780739483911079260}
   m_Layer: 0
@@ -92,19 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4780739483911079254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3058125068487187030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08dcbe2af2b6049e9a7a5b7275df8740, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 6
 --- !u!50 &4780739483911079261
 Rigidbody2D:
   serializedVersion: 4
@@ -126,32 +111,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &4780739483911079250
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3058125068487187030}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &4780739483911079251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +126,7 @@ MonoBehaviour:
   charac: {fileID: 0}
   ourTime: {fileID: 0}
   theHighScore: {fileID: 0}
+  isInvulnerable: 0
 --- !u!114 &4780739483911079260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,15 +139,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebade70ba551641c58176bab7499a7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circlesNeeded: 0
   ballOne: {fileID: 6202277970300953118}
   ballOneScore: 0
   ballTwo: {fileID: 4004519105972636503}
   ballTwoScore: 0
   ballThree: {fileID: 4004519105131281180}
   ballThreeScore: 0
+  mainCharacterScore: 0
   allScore: 0
-  ballUltCharges: 0
-  invulnCircle: {fileID: 0}
+  ballInvCharges: 0
+  ballInvCounter: 0
+  ballInvPrev: 0
   mainCharacter: {fileID: 3058125068487187030}
 --- !u!1001 &2582984949322619250
 PrefabInstance:
