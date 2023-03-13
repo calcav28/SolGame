@@ -197,8 +197,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8caa56e1cc78544085a5561ab80d728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeOfMovement: 0
-  testInt: 0
+  wasdMovement: 0
+  solProPoints: 0
+  solEasyHighScore: 0
+  solEasyTime: 0
+  solMedHighScore: 0
+  solMedTime: 0
+  solHardHighScore: 0
+  solHardTime: 0
+  solGamesPlayed: 0
+  solHasQAbility: 0
+  solHasEAbility: 0
+  solHasRAbility: 0
+  solHasFAbility: 0
 --- !u!114 &78584170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2829adc1b0da8a34199a348c4231ab30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superPoints: 0
+  skillProPoints: 0
+  stealthProPoints: 0
 --- !u!1 &910878511
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +595,7 @@ GameObject:
   - component: {fileID: 1418827866}
   - component: {fileID: 1418827865}
   - component: {fileID: 1418827864}
+  - component: {fileID: 1418827868}
   m_Layer: 5
   m_Name: PressToContinue
   m_TagString: Untagged
@@ -717,6 +732,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418827862}
   m_CullTransparentMesh: 1
+--- !u!114 &1418827868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418827862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925583aa696905944b8a22c8eb1ebf50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solStats: {fileID: 0}
 --- !u!1 &1588316347
 GameObject:
   m_ObjectHideFlags: 0

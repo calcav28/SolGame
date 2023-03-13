@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class SolPlayerStats : MonoBehaviour
 {
     public bool wasdMovement;
+
+    public int solProPoints;
+
     public int solEasyHighScore;
     public int solEasyTime;
     public int solMedHighScore;
@@ -21,7 +24,7 @@ public class SolPlayerStats : MonoBehaviour
     public bool solHasRAbility;
     public bool solHasFAbility;
 
-    void Awake()
+    void Update()
     {
          setMovementType();
     }
@@ -50,5 +53,10 @@ public class SolPlayerStats : MonoBehaviour
                 solHasEAbility = true;
                 break;
         }
+    }
+
+    public int getSolProPoints()
+    {
+        return solProPoints;
     }
 }

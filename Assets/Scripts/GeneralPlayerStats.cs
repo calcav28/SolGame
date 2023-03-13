@@ -7,7 +7,6 @@ public class GeneralPlayerStats : MonoBehaviour
 {
     //currency earned from all games
     public int superPoints;
-    public int solProPoints;
     public int skillProPoints;
     public int stealthProPoints;
 
@@ -16,11 +15,6 @@ public class GeneralPlayerStats : MonoBehaviour
     public int getSuperPoints()
     {
         return superPoints;
-    }
-
-    public int getSolProPoints()
-    {
-        return solProPoints;
     }
 
     public int getSkillProPoints()

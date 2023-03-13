@@ -35,9 +35,9 @@ public class BuyItem : MonoBehaviour
                 }
                 break;
             case "solProPoints":
-                if (generalStuff.getSolProPoints() >= pointsToBuy)
+                if (solStuff.getSolProPoints() >= pointsToBuy)
                 {
-                    GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerStats>().solProPoints -= pointsToBuy;
+                    GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solProPoints -= pointsToBuy;
                     solStuff.solBuyItem(itemToActivate);
                     itemToPurchase.SetActive(false);
                     nextItemToPurchase.SetActive(true);
