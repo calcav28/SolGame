@@ -5,16 +5,14 @@ using TMPro;
 
 public class TimeToText : MonoBehaviour
 {
-    public GameObject timerThing;
     public TMP_Text timerText;
-    public int timee;
+    public int timeToText;
 
     void Start()
     {
-        timerThing = GameObject.Find("TimerTest");
-        timerThing.GetComponent<Timer>().playing = false;
-        timee = timerThing.GetComponent<Timer>().goodTimerTime;
-        timerText.text = timee.ToString();
-        timerThing.GetComponent<Timer>().timerTime = 0;
+        GameObject.Find("TimerTest").GetComponent<Timer>().playing = false;
+        timeToText = GameObject.Find("TimerTest").GetComponent<Timer>().goodTimerTime;
+        timerText.text = timeToText.ToString();
+        GameObject.Find("TimerTest").GetComponent<Timer>().timerTime = 0;
     }
 }

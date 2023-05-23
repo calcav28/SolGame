@@ -548,7 +548,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.20784314, g: 0.40392157, b: 0.98039216, a: 1}
+  m_fontColor: {r: 0.20784314, g: 0.5882353, b: 0.98039216, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.20784314, g: 0.40392157, b: 0.98039216, a: 1}
+  m_fontColor: {r: 0.20784314, g: 0.5882353, b: 0.98039216, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1274,9 +1274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acd1b66eac3d4bccbf1c0c46f0a5175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerThing: {fileID: 0}
   timerText: {fileID: 1126998385}
-  timee: 0
+  timeToText: 0
 --- !u!1 &1201902202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2386,37 @@ MonoBehaviour:
   highScoreText: {fileID: 1875578278}
   theMainHighScore: 0
   thePreviousHighScore: 0
+--- !u!1 &1998095890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998095891}
+  m_Layer: 0
+  m_Name: SaveOnAwake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1998095891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998095890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 392.33813, y: 220.61523, z: 123.906746}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2087747196
 GameObject:
   m_ObjectHideFlags: 0

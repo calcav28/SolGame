@@ -10,6 +10,10 @@ public class SolMovement : MonoBehaviour
     public GameObject placeToMove;
     public Vector2 movePosition;
 
+    void Start() {
+        wasdMovement = true;
+    }
+
     void Update()
     {
         wasdMovement = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().wasdMovement;

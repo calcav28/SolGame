@@ -24,22 +24,8 @@ public class SolPlayerStats : MonoBehaviour
     public bool solHasRAbility;
     public bool solHasFAbility;
 
-    void Update()
-    {
-         setMovementType();
-    }
-
-
-    public void setMovementType()
-    {
-        if(GameObject.Find("WASDMovement").activeSelf)
-        {
-            wasdMovement = true;
-        }
-        if (GameObject.Find("RightClickMovement").activeSelf)
-        {
-            wasdMovement = false;
-        }
+    void Start() {
+        wasdMovement = true;
     }
 
     public void solBuyItem(string itemToActivate)

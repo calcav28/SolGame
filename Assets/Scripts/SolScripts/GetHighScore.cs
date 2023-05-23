@@ -15,7 +15,7 @@ public class GetHighScore : MonoBehaviour
     private int two;
     private int three;
     private int character;
-    private int all;
+    public int all;
     public int mainHighScore;
     public int prevHighScore;
 

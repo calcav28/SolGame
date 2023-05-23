@@ -446,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925583aa696905944b8a22c8eb1ebf50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  solStats: {fileID: 0}
 --- !u!114 &31100327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,7 +1079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.85882354, g: 0.20392157, b: 1, a: 1}
+  m_Color: {r: 0.673416, g: 0.504717, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1215,7 +1216,7 @@ RectTransform:
   m_Children:
   - {fileID: 1703227119}
   m_Father: {fileID: 1521882401}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -1291,7 +1292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 1}
+  m_Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1330,6 +1331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainButton: {fileID: 351150995}
   otherButton: {fileID: 1203630810}
+  isKeyboard: 1
+  isMouse: 0
 --- !u!1001 &448518569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2638,7 +2641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.85882354, g: 0.20392157, b: 1, a: 1}
+  m_Color: {r: 0.9054744, g: 0.4669811, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2858,7 +2861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1203630811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2873,7 +2876,7 @@ RectTransform:
   m_Children:
   - {fileID: 1843028512}
   m_Father: {fileID: 1521882401}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -2988,6 +2991,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainButton: {fileID: 1203630810}
   otherButton: {fileID: 351150995}
+  isKeyboard: 0
+  isMouse: 1
 --- !u!1 &1253340254
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,7 +3579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18770024, g: 0.6981132, b: 0.21821132, a: 1}
+  m_Color: {r: 0.20784314, g: 0.40392157, b: 0.98039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4104,7 +4109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1520653722
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4210,8 +4215,8 @@ RectTransform:
   - {fileID: 1013297049}
   - {fileID: 1911475098}
   - {fileID: 51510557}
-  - {fileID: 351150996}
   - {fileID: 1203630811}
+  - {fileID: 351150996}
   - {fileID: 2035481773}
   - {fileID: 1520653722}
   m_Father: {fileID: 73809104}
