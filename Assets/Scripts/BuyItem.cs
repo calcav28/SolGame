@@ -53,6 +53,8 @@ public class BuyItem : MonoBehaviour
                 //code here
                 break;
         }
+        //call save here
+        GameObject.Find("GlobalScripts").GetComponent<SaveLoadSystem>().saveToJson();
     }
 
     public void givePoints() {

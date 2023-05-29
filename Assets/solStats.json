@@ -1,6 +1,6 @@
 {
     "wasdMovement": true,
-    "solProPoints": 1,
+    "solProPoints": 51,
     "solEasyHighScore": 0,
     "solEasyTime": 0,
     "solMedHighScore": 0,
@@ -8,7 +8,7 @@
     "solHardHighScore": 0,
     "solHardTime": 0,
     "solGamesPlayed": 0,
-    "solHasQAbility": false,
+    "solHasQAbility": true,
     "solHasQUpgrade": false,
     "solHasEAbility": false,
     "solHasEUpgrade": false,
