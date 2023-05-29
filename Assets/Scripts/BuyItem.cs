@@ -15,7 +15,6 @@ public class BuyItem : MonoBehaviour
     void Awake()
     {
         
-        
     }
 
     public void buyItem(string itemToActivate)
@@ -30,8 +29,7 @@ public class BuyItem : MonoBehaviour
                     //this will be the item in question player buys
                     itemToPurchase.SetActive(false);
                     nextItemToPurchase.SetActive(true);
-                } else
-                {
+                } else {
                     //display text showing how many points needed to get item
                 }
                 break;
@@ -44,8 +42,7 @@ public class BuyItem : MonoBehaviour
                     itemToPurchase.SetActive(false);
                     nextItemToPurchase.SetActive(true);
                 }
-                else
-                {
+                else {
                     //display text showing how many points needed to get item
                 }
                 break;

@@ -25,16 +25,25 @@ public class SaveLoadSystem : MonoBehaviour
     {
         //solScript Loading
         string json = File.ReadAllText(Application.dataPath + "/solStats.json");
-        SolPlayerStats jsonSolStats = JsonUtility.FromJson<SolPlayerStats>(json);
+        solStats = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
+        JsonUtility.FromJsonOverwrite(json, solStats);
 
+        /*
         //general sol stuff
         solStats.solProPoints = jsonSolStats.solProPoints;
+        solStats.wasdMovement = jsonSolStats.wasdMovement;
 
         //loading abilities
         solStats.solHasQAbility = jsonSolStats.solHasQAbility;
         solStats.solHasEAbility = jsonSolStats.solHasEAbility;
         solStats.solHasRAbility = jsonSolStats.solHasRAbility;
         solStats.solHasFAbility = jsonSolStats.solHasFAbility;
+
+        //loading upgrades
+        solStats.solHasQUpgrade = jsonSolStats.solHasQUpgrade;
+        solStats.solHasEUpgrade = jsonSolStats.solHasEUpgrade;
+        solStats.solHasRUpgrade = jsonSolStats.solHasRUpgrade;
+        solStats.solHasFUpgrade = jsonSolStats.solHasFUpgrade;
 
         //loading scores
         solStats.solEasyHighScore = jsonSolStats.solEasyHighScore;
@@ -43,5 +52,6 @@ public class SaveLoadSystem : MonoBehaviour
         solStats.solMedTime = jsonSolStats.solMedTime;
         solStats.solHardHighScore = jsonSolStats.solHardHighScore;
         solStats.solHardTime = jsonSolStats.solHardTime;
+        */
     }
 }

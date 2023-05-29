@@ -1,5 +1,5 @@
 {
-    "wasdMovement": false,
+    "wasdMovement": true,
     "solProPoints": 1,
     "solEasyHighScore": 0,
     "solEasyTime": 0,
@@ -9,7 +9,13 @@
     "solHardTime": 0,
     "solGamesPlayed": 0,
     "solHasQAbility": false,
+    "solHasQUpgrade": false,
     "solHasEAbility": false,
+    "solHasEUpgrade": false,
     "solHasRAbility": false,
-    "solHasFAbility": false
+    "solHasRUpgrade": false,
+    "solHasFAbility": false,
+    "solHasFUpgrade": false,
+    "solHasSpacebarAbility": false,
+    "solHasSpacebarUpgrade": false
 }

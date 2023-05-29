@@ -8,11 +8,6 @@ public class TestDisplayPoints : MonoBehaviour
     public TMP_Text textForPoints;
     public int currentPoints;
 
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {

@@ -45,8 +45,14 @@ public class SolPlayerStats : MonoBehaviour
             case "qAbilityActivate":
                 solHasQAbility = true;
                 break;
+            case "qUpgradeActivate":
+                solHasQUpgrade = true;
+                break;
             case "eAbilityActivate":
                 solHasEAbility = true;
+                break;
+            case "eUpgradeActivate":
+                solHasEUpgrade = true;
                 break;
             case "rAbilityActivate":
                 solHasRAbility = true;

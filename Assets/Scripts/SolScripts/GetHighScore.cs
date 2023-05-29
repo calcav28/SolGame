@@ -38,9 +38,6 @@ public class GetHighScore : MonoBehaviour
         character = characterObject.GetComponent<CharacterDestroyObject>().ballsHit;
         
         all = one + two + three + character;
-        GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solProPoints = all;
-        GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerStats>().superPoints = all;
-
         //change text based on difficulty
 
         if (all >= prevHighScore) {
