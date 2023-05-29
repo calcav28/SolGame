@@ -14,8 +14,8 @@ public class BuyItem : MonoBehaviour
 
     void Awake()
     {
-        solStuff = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
-        generalStuff = GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerStats>();
+        
+        
     }
 
     public void buyItem(string itemToActivate)
@@ -23,6 +23,7 @@ public class BuyItem : MonoBehaviour
         switch (pointsToUse)
         {
             case "superPoints":
+            generalStuff = GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerStats>();
                 if (generalStuff.getSuperPoints() >= pointsToBuy)
                 {
                     GameObject.Find("GlobalScripts").GetComponent<GeneralPlayerStats>().superPoints -= pointsToBuy;
@@ -35,6 +36,7 @@ public class BuyItem : MonoBehaviour
                 }
                 break;
             case "solProPoints":
+                solStuff = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
                 if (solStuff.getSolProPoints() >= pointsToBuy)
                 {
                     GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solProPoints -= pointsToBuy;
@@ -54,5 +56,9 @@ public class BuyItem : MonoBehaviour
                 //code here
                 break;
         }
+    }
+
+    public void givePoints() {
+        GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solProPoints += 100;
     }
 }

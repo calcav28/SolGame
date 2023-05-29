@@ -21,8 +21,13 @@ public class ShootSkillShot : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Q) || Input.GetMouseButtonDown(0)) && offCooldown)
         {
-            Invoke("resetMoveSpeed", 0.5f);
-            Invoke("useSkillShot", 0.25f);
+            //original code to mimic blitzcrank q skillshot
+            //Invoke("resetMoveSpeed", 0.5f);
+            //Invoke("useSkillShot", 0.25f);
+
+            //trying as a normal shot, feels a lot better than above code
+            Invoke("resetMoveSpeed", 0.1f);
+            Invoke("useSkillShot", 0.01f);
         }
 
     }
@@ -33,7 +38,6 @@ public class ShootSkillShot : MonoBehaviour
         GameObject.Find("Character").GetComponent<MouseMovement>().placeToMove.transform.position = previousMovePosition;
     }
 
-    //still doesn't work properly
     void useSkillShot()
     {
         //stops player from moving after shooting
