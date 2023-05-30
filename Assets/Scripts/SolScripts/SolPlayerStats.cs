@@ -57,9 +57,15 @@ public class SolPlayerStats : MonoBehaviour
             case "rAbilityActivate":
                 solHasRAbility = true;
                 break;
+            case "rUpgradeActivate":
+                solHasRUpgrade = true;
+                break;
             case "fAbilityActivate":
                 solHasFAbility = true;
                 break;
+            case "fUpgradeActivate":
+                solHasFUpgrade = true;
+                break; 
             case "spacebarAbilityActivate":
                 solHasSpacebarAbility = true;
                 break;
