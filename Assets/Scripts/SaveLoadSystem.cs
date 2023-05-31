@@ -6,10 +6,12 @@ using UnityEngine;
 public class SaveLoadSystem : MonoBehaviour
 {
     public SolPlayerStats solStats;
+    public SkillPlayerStats skillStats;
 
     void Update()
     {
         solStats = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
+        skillStats = GameObject.Find("GlobalScripts").GetComponent<SkillPlayerStats>();
     }
 
 
@@ -19,6 +21,11 @@ public class SaveLoadSystem : MonoBehaviour
         SolPlayerStats jsonSolStats = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
         string json = JsonUtility.ToJson(jsonSolStats, true);
         File.WriteAllText(Application.dataPath + "/solStats.json", json);
+
+        SkillPlayerStats jsonSkillStats = GameObject.Find("GlobalScripts").GetComponent<SkillPlayerStats>();
+        json = JsonUtility.ToJson(jsonSkillStats, true);
+        File.WriteAllText(Application.dataPath + "/skillStats.json", json);
+
     }
 
     public void loadFromJson()
@@ -27,31 +34,5 @@ public class SaveLoadSystem : MonoBehaviour
         string json = File.ReadAllText(Application.dataPath + "/solStats.json");
         solStats = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
         JsonUtility.FromJsonOverwrite(json, solStats);
-
-        /*
-        //general sol stuff
-        solStats.solProPoints = jsonSolStats.solProPoints;
-        solStats.wasdMovement = jsonSolStats.wasdMovement;
-
-        //loading abilities
-        solStats.solHasQAbility = jsonSolStats.solHasQAbility;
-        solStats.solHasEAbility = jsonSolStats.solHasEAbility;
-        solStats.solHasRAbility = jsonSolStats.solHasRAbility;
-        solStats.solHasFAbility = jsonSolStats.solHasFAbility;
-
-        //loading upgrades
-        solStats.solHasQUpgrade = jsonSolStats.solHasQUpgrade;
-        solStats.solHasEUpgrade = jsonSolStats.solHasEUpgrade;
-        solStats.solHasRUpgrade = jsonSolStats.solHasRUpgrade;
-        solStats.solHasFUpgrade = jsonSolStats.solHasFUpgrade;
-
-        //loading scores
-        solStats.solEasyHighScore = jsonSolStats.solEasyHighScore;
-        solStats.solEasyTime = jsonSolStats.solEasyTime;
-        solStats.solMedHighScore = jsonSolStats.solMedHighScore;
-        solStats.solMedTime = jsonSolStats.solMedTime;
-        solStats.solHardHighScore = jsonSolStats.solHardHighScore;
-        solStats.solHardTime = jsonSolStats.solHardTime;
-        */
     }
 }
