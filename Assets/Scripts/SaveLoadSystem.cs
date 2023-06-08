@@ -18,10 +18,13 @@ public class SaveLoadSystem : MonoBehaviour
     public void saveToJson()
     {
         //get all class types and assign them to scripts in GlobalScripts
+        
+        //sol data 
         SolPlayerStats jsonSolStats = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
         string json = JsonUtility.ToJson(jsonSolStats, true);
         File.WriteAllText(Application.dataPath + "/solStats.json", json);
 
+        //skill data
         SkillPlayerStats jsonSkillStats = GameObject.Find("GlobalScripts").GetComponent<SkillPlayerStats>();
         json = JsonUtility.ToJson(jsonSkillStats, true);
         File.WriteAllText(Application.dataPath + "/skillStats.json", json);
@@ -34,5 +37,9 @@ public class SaveLoadSystem : MonoBehaviour
         string json = File.ReadAllText(Application.dataPath + "/solStats.json");
         solStats = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>();
         JsonUtility.FromJsonOverwrite(json, solStats);
+
+        json = File.ReadAllText(Application.dataPath + "/skillStats.json");
+        skillStats = GameObject.Find("GlobalScripts").GetComponent<SkillPlayerStats>();
+        JsonUtility.FromJsonOverwrite(json, skillStats);
     }
 }
