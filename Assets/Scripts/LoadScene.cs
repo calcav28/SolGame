@@ -34,4 +34,6 @@ public class LoadScene : MonoBehaviour
         GameObject.Find("GlobalScripts").GetComponent<SolGameStats>().gameDifficulty = diff;
         DontDestroyOnLoad(GameObject.Find("GlobalScripts"));
     }
+
+
 }

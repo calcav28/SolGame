@@ -7,10 +7,17 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class SolPlayerStats : MonoBehaviour
 {
-    public bool wasdMovement;
 
+
+
+    //keybinds and preferences
+    public bool wasdMovement;
+    //need keybinds for q, e, r, f, and spacebar abilities
+
+    //currency for abilties
     public int solProPoints;
 
+    //high score stats for player based on difficulty
     public int solEasyHighScore;
     public int solEasyTime;
     public int solMedHighScore;
@@ -19,6 +26,8 @@ public class SolPlayerStats : MonoBehaviour
     public int solHardTime;
     public int solGamesPlayed;
 
+
+    //all upgrades for player
     public bool solHasQAbility;
     public bool solHasQUpgrade;
 

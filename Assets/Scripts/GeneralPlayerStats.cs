@@ -11,6 +11,12 @@ public class GeneralPlayerStats : MonoBehaviour
     public int gamesPlayed;
 
 
+    //setting choices for player
+    public bool isFullscreen;
+    public int musicNoise; //from [0, 100]
+    public int soundEffectsNoise; //from [0, 100]
+
+
     //get methods for points
     public int getSuperPoints()
     {
