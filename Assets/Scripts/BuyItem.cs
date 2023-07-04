@@ -11,10 +11,31 @@ public class BuyItem : MonoBehaviour
     public string pointsToUse;
     public SolPlayerStats solStuff;
     public GeneralPlayerStats generalStuff;
+    public bool hasBeenPurchased;
+    public string itemToCheck;
+
+    void Start()
+    {
+        hasBeenPurchased = solStuff.getIfPurchased(itemToCheck);
+        
+        if (hasBeenPurchased)
+        {
+            itemToPurchase.SetActive(false);
+            nextItemToPurchase.SetActive(true);
+        }
+
+    }
 
     void Awake()
     {
-        
+        hasBeenPurchased = solStuff.getIfPurchased(itemToCheck);
+
+        if (hasBeenPurchased)
+        {
+            itemToPurchase.SetActive(false);
+            nextItemToPurchase.SetActive(true);
+        }
+
     }
 
     public void buyItem(string itemToActivate)

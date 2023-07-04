@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1283,6 +1283,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520653722}
     m_Modifications:
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: itemToCheck
+      value: qUpgrade
+      objectReference: {fileID: 0}
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
       value: 100
@@ -1595,6 +1599,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1520653722}
     m_Modifications:
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: itemToCheck
+      value: fUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
       value: 400
       objectReference: {fileID: 0}
@@ -1768,6 +1776,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520653722}
     m_Modifications:
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: itemToCheck
+      value: rUpgrade
+      objectReference: {fileID: 0}
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
       value: 400
@@ -2488,6 +2500,8 @@ MonoBehaviour:
   pointsToUse: 
   solStuff: {fileID: 0}
   generalStuff: {fileID: 0}
+  hasBeenPurchased: 0
+  itemToCheck: 
 --- !u!1 &584921366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,6 +2998,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520653722}
     m_Modifications:
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: itemToCheck
+      value: rAbility
+      objectReference: {fileID: 0}
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
       value: 200
@@ -4123,6 +4141,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1520653722}
     m_Modifications:
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: itemToCheck
+      value: fAbility
+      objectReference: {fileID: 0}
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
       value: 200
       objectReference: {fileID: 0}
@@ -5076,7 +5098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1520653722
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5552,6 +5574,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520653722}
     m_Modifications:
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: itemToCheck
+      value: eAbility
+      objectReference: {fileID: 0}
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
       value: 100
@@ -6190,6 +6216,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520653722}
     m_Modifications:
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: itemToCheck
+      value: eUpgrade
+      objectReference: {fileID: 0}
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
       value: 200
@@ -7012,6 +7042,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520653722}
     m_Modifications:
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: itemToCheck
+      value: qAbility
+      objectReference: {fileID: 0}
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
       value: 50

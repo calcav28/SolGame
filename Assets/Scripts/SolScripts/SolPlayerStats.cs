@@ -85,4 +85,39 @@ public class SolPlayerStats : MonoBehaviour
     {
         return solProPoints;
     }
+
+    public bool getIfPurchased(string itemToCheck)
+    {
+        switch (itemToCheck)
+        {
+            case "qAbility":
+                return solHasQAbility;
+                //break;
+            case "qUpgrade":
+                return solHasQUpgrade;
+                //break;
+            case "eAbility":
+                return solHasEAbility;
+                //break;
+            case "eUpgrade":
+                return solHasEUpgrade;
+                //break;
+            case "rAbility":
+                return solHasRAbility;
+                //break;
+            case "rUpgrade":
+                return solHasRUpgrade;
+                //break;
+            case "fAbility":
+                return solHasFAbility;
+                //break;
+            case "fUpgrade":
+                return solHasFUpgrade;
+                //break;
+            case "spacebarAbility":
+                return solHasSpacebarAbility;
+                //break;
+            default: return false;
+        }
+    }
 }
