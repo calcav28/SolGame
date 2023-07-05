@@ -11,7 +11,7 @@ public class SolPlayerStats : MonoBehaviour
 
 
     //keybinds and preferences
-    public bool wasdMovement;
+    public bool wasdMovement; //can be turned into int for more than 2 movement systems
     //need keybinds for q, e, r, f, and spacebar abilities
 
     //currency for abilties
