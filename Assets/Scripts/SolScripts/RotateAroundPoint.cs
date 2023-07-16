@@ -2,25 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//This script also handles abilities for player alongside the circles rotating around the player
+//This script handles the circles rotating around the player alongside abilities for player 
 
 public class RotateAroundPoint : MonoBehaviour
 {
 
     public float rotationSpeed;
     public GameObject pivotObject;
-    public float ballSizeTimer = 10;
-    public float ballSpeedTimer = 10;
-    public float ballUltTimer = 15;
-    public float ballSizeCooldown = 10;
-    public float ballSpeedCooldown = 10;
-    public float ballUltCooldown = 15;
+    public float ballSizeTimer;
+    public float ballSpeedTimer;
+    public float ballUltTimer;
+    public float ballSizeCooldown;
+    public float ballSpeedCooldown;
+    public float ballUltCooldown;
     public bool usedAbility = false;
     public bool hasQ;
     public bool hasE;
     public bool hasR;
     public bool hasF;
-    public bool hasSpacebar;
+    public bool hasQUpgrade;
+    public bool hasEUpgrade;
+    public bool hasRUpgrade;
+    public bool hasFUpgrade;
+
 
     
     void Awake()
@@ -29,12 +33,52 @@ public class RotateAroundPoint : MonoBehaviour
 
 
         //abilities:
+
         hasQ = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasQAbility;
         hasE = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasEAbility;
         hasR = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasRAbility;
         hasF = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasFAbility;
 
+
+
         //ability upgrades:
+
+        hasQUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasQUpgrade;
+        hasEUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasEUpgrade;
+        hasRUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasRUpgrade;
+        hasFUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasFUpgrade;
+
+
+
+        if (hasEUpgrade)
+        {
+            ballSizeTimer = 10;
+            ballSizeCooldown = 10;
+        } else
+        {
+            ballSizeTimer = 30;
+            ballSizeCooldown = 30;
+        }
+
+        if (hasRUpgrade)
+        {
+            ballSpeedTimer = 10;
+            ballSpeedCooldown = 10;
+        } else
+        {
+            ballSpeedTimer = 30;
+            ballSpeedCooldown = 30;
+        }
+
+        if (hasFUpgrade)
+        {
+            ballUltTimer = 15; 
+            ballUltCooldown = 15;
+        } else
+        {
+            ballUltTimer = 45;
+            ballUltCooldown = 45;
+        }
 
         //keybinds:
     }
@@ -60,7 +104,7 @@ public class RotateAroundPoint : MonoBehaviour
 
         //makes balls bigger, 2/E
         if ((Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.E)) && hasE
-            && ballSizeTimer >= 10.0f) {
+            && ballSizeTimer >= ballSizeCooldown) {
             usedAbility = true;
             ballSizeTimer = 0;
             gameObject.transform.localScale += new Vector3(1.25f, 1.25f, 1f);
@@ -70,7 +114,7 @@ public class RotateAroundPoint : MonoBehaviour
 
         //makes balls rotate faster, 3/R
         if ((Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.R)) && hasR
-            && ballSpeedTimer >= 10.0f) {
+            && ballSpeedTimer >= ballSpeedCooldown) {
             usedAbility = true;
             ballSpeedTimer = 0;
             rotationSpeed = rotationSpeed * 2.0f;
@@ -80,7 +124,7 @@ public class RotateAroundPoint : MonoBehaviour
         
         //ultimate ability, 4/F,
         if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.F)) && hasF
-            && ballUltTimer >= 15.0f) {
+            && ballUltTimer >= ballUltCooldown) {
             usedAbility = true;
             ballUltTimer = 0;
             rotationSpeed = rotationSpeed * 2.5f;

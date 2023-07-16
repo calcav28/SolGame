@@ -9,6 +9,8 @@ public class QImageSwapper : MonoBehaviour
 
     public GameObject mainImage;
     public GameObject otherImage;
+    public GameObject number;
+    public GameObject rotation;
     public KeyCode firstKey;
     public KeyCode secondKey;
     public bool canUseAbility;
@@ -26,6 +28,8 @@ public class QImageSwapper : MonoBehaviour
         {
             mainImage.SetActive(false);
             otherImage.SetActive(false);
+            number.SetActive(false);
+            rotation.SetActive(false);  
         }
 
         if ((Input.GetKeyDown(firstKey) || Input.GetKeyDown(secondKey)) && mainImage.activeSelf && canUseAbility)

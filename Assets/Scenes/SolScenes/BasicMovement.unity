@@ -1084,6 +1084,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 287425710}
   barImage: {fileID: 1710149551}
+  otherObject1: {fileID: 1185637247}
+  otherObject2: {fileID: 1710149548}
+  otherObject3: {fileID: 729929520}
   firstKey: 32
   secondKey: 32
   abilityUsed: 0
@@ -1492,6 +1495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 421430674}
   otherImage: {fileID: 2145093541}
+  number: {fileID: 1922202661}
+  rotation: {fileID: 1864178341}
   firstKey: 49
   secondKey: 113
   canUseAbility: 0
@@ -3389,6 +3394,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 1176402970}
   barImage: {fileID: 1224547898}
+  otherObject1: {fileID: 209640632}
+  otherObject2: {fileID: 1944163269}
+  otherObject3: {fileID: 0}
   firstKey: 50
   secondKey: 101
   abilityUsed: 0
@@ -4602,6 +4610,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 1647168696}
   barImage: {fileID: 764613461}
+  otherObject1: {fileID: 93370503}
+  otherObject2: {fileID: 663228476}
+  otherObject3: {fileID: 0}
   firstKey: 52
   secondKey: 116
   abilityUsed: 0
@@ -6595,6 +6606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 2145093541}
   otherImage: {fileID: 421430674}
+  number: {fileID: 0}
+  rotation: {fileID: 0}
   firstKey: 49
   secondKey: 113
   canUseAbility: 0
@@ -6730,6 +6743,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 2145477737}
   barImage: {fileID: 48978163}
+  otherObject1: {fileID: 628826342}
+  otherObject2: {fileID: 141764869}
+  otherObject3: {fileID: 0}
   firstKey: 51
   secondKey: 114
   abilityUsed: 0
@@ -6818,6 +6834,10 @@ PrefabInstance:
     - target: {fileID: 4780739483911079260, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
       propertyPath: invulnCircle
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780739483911079260, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
+      propertyPath: abilityToCheck
+      value: spacebarAbility
       objectReference: {fileID: 0}
     - target: {fileID: 4780739483911079261, guid: ee05a4ee1cd2742adaa4d02aba8c4359, type: 3}
       propertyPath: m_Mass

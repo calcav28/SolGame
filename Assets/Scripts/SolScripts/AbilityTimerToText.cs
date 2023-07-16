@@ -11,38 +11,44 @@ public class AbilityTimerToText : MonoBehaviour
     public float eNumberCountdown;
     public float rNumberCountdown;
     public float fNumberCountdown;
+    public float eNumberCooldown;
+    public float rNumberCooldown;
+    public float fNumberCooldown;
     public GameObject circleDude;
     public TMP_Text displayText;
     public string compareText;
 
-    void Start()
+    void Awake()
     {
         compareText = displayText.text;
         eNumber = 10;
         rNumber = 10;
         fNumber = 15;
-        eNumberCountdown = 10;
-        rNumberCountdown = 10;
-        fNumberCountdown = 15;
+        eNumberCountdown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
+        eNumberCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
+        rNumberCountdown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
+        rNumberCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
+        fNumberCountdown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltCooldown;
+        fNumberCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltCooldown;
     }
 
     void Update()
     {
         eNumber = circleDude.GetComponent<RotateAroundPoint>().ballSizeTimer;
         eNumber = Mathf.FloorToInt(eNumber);
-        if (eNumber >= 10) {
-            eNumber = 10;
+        if (eNumber >= eNumberCooldown) {
+            eNumber = eNumberCooldown;
         }
         
         rNumber = circleDude.GetComponent<RotateAroundPoint>().ballSpeedTimer;
         rNumber = Mathf.FloorToInt(rNumber);
-        if (rNumber >= 10) {
-            rNumber = 10;
+        if (rNumber >= rNumberCooldown) {
+            rNumber = rNumberCooldown;
         }
         fNumber = circleDude.GetComponent<RotateAroundPoint>().ballUltTimer;
         fNumber = Mathf.FloorToInt(fNumber);
-        if (fNumber >= 15) {
-            fNumber = 15;
+        if (fNumber >= fNumberCooldown) {
+            fNumber = fNumberCooldown;
         }
 
         eNumberCountdown = circleDude.GetComponent<RotateAroundPoint>().ballSizeCooldown;

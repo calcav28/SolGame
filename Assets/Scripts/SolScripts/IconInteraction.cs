@@ -8,6 +8,9 @@ public class IconInteraction : MonoBehaviour
 
     public Image mainImage;
     public Image barImage;
+    public GameObject otherObject1;
+    public GameObject otherObject2;
+    public GameObject otherObject3;
     public KeyCode firstKey;
     public KeyCode secondKey;
     public bool abilityUsed;
@@ -31,6 +34,9 @@ public class IconInteraction : MonoBehaviour
         {
             mainImage.enabled = false;
             barImage.enabled = false;
+            otherObject1.SetActive(false);
+            otherObject2.SetActive(false);
+            otherObject3.SetActive(false);
         }
         
         
