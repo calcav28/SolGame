@@ -22,15 +22,15 @@ public class AbilityTimerToText : MonoBehaviour
     void Awake()
     {
         compareText = displayText.text;
-        eNumber = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
-        rNumber = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
-        fNumber = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltCooldown;
-        eNumberCountdown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
-        eNumberCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
-        rNumberCountdown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
-        rNumberCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
-        fNumberCountdown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltCooldown;
-        fNumberCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltCooldown;
+        eNumber = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("eAbility");
+        rNumber = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("rAbility");
+        fNumber = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("fAbility");
+        eNumberCountdown = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("eAbility");
+        eNumberCooldown = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("eAbility");
+        rNumberCountdown = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("rAbility");
+        rNumberCooldown = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("rAbility");
+        fNumberCountdown = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("fAbility");
+        fNumberCooldown = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt("fAbility");
     }
 
     void Update()

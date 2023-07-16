@@ -35,27 +35,26 @@ public class RotateAroundPoint : MonoBehaviour
 
         //abilities:
 
-        hasQ = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasQAbility;
-        hasE = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasEAbility;
-        hasR = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasRAbility;
-        hasF = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasFAbility;
+        hasQ = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased("qAbility");
+        hasE = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased("eAbility");
+        hasR = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased("rAbility");
+        hasF = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased("fAbility");
 
 
 
         //ability upgrades:
 
-        hasQUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasQUpgrade;
-        hasEUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasEUpgrade;
-        hasRUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasRUpgrade;
-        hasFUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solHasFUpgrade;
-
-
+        hasQUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased("qUpgrade");
+        hasEUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased("eUpgrade");
+        hasRUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased("rUpgrade");
+        hasFUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased("fUpgrade");
 
         if (hasEUpgrade)
         {
             ballSizeTimer = 10;
             ballSizeCooldown = 10;
-        } else
+        }
+        else
         {
             ballSizeTimer = 30;
             ballSizeCooldown = 30;
@@ -65,7 +64,8 @@ public class RotateAroundPoint : MonoBehaviour
         {
             ballSpeedTimer = 10;
             ballSpeedCooldown = 10;
-        } else
+        }
+        else
         {
             ballSpeedTimer = 30;
             ballSpeedCooldown = 30;
@@ -73,9 +73,10 @@ public class RotateAroundPoint : MonoBehaviour
 
         if (hasFUpgrade)
         {
-            ballUltTimer = 15; 
+            ballUltTimer = 15;
             ballUltCooldown = 15;
-        } else
+        }
+        else
         {
             ballUltTimer = 45;
             ballUltCooldown = 45;
@@ -85,8 +86,8 @@ public class RotateAroundPoint : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    { 
+
         //rotates object around point
         transform.RotateAround(pivotObject.transform.position, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
         

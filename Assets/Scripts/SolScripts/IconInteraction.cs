@@ -25,23 +25,25 @@ public class IconInteraction : MonoBehaviour
     void Awake()
     {
         imageColor = mainImage.color;
-        canUseAbility = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased(abilityToCheck);
-        switch (abilityToCheck)
-        {
-            case "eAbility":
-                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
-                break;
-            case "rAbility":
-                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
-                break;
-            case "fAbility":
-                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltCooldown;
-                break;
-        }
+
     }
 
     void Update()
     {
+        canUseAbility = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased(abilityToCheck);
+        switch (abilityToCheck)
+        {
+            case "eAbility":
+                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeTimer;
+                break;
+            case "rAbility":
+                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedTimer;
+                break;
+            case "fAbility":
+                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltTimer;
+                break;
+        }
+
         if (!canUseAbility)
         {
             mainImage.enabled = false;

@@ -119,4 +119,40 @@ public class SolPlayerStats : MonoBehaviour
             default: return false;
         }
     }
+
+    public int getIfPurchasedInt(string itemToCheck)
+    {
+        switch (itemToCheck)
+        {
+            case "eAbility":
+                if (solHasEUpgrade)
+                {
+                    return 10;
+                }
+                else
+                {
+                    return 30;
+                }
+            case "rAbility":
+                if (solHasRUpgrade)
+                {
+                    return 10;
+                }
+                else
+                {
+                    return 30;
+                }
+            case "fAbility":
+                if (solHasFUpgrade)
+                {
+                    return 10;
+                }
+                else
+                {
+                    return 30;
+                }
+            default: return 0;
+
+        }
+    }
 }
