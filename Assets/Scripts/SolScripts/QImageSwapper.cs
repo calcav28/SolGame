@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,10 +11,24 @@ public class QImageSwapper : MonoBehaviour
     public GameObject otherImage;
     public KeyCode firstKey;
     public KeyCode secondKey;
+    public bool canUseAbility;
+    public string abilityToCheck;
+
+    void Awake()
+    {
+        canUseAbility = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased(abilityToCheck);
+    }
 
     void Update()
     {
-        if ((Input.GetKeyDown(firstKey) || Input.GetKeyDown(secondKey)) && mainImage.activeSelf)
+
+        if (!canUseAbility)
+        {
+            mainImage.SetActive(false);
+            otherImage.SetActive(false);
+        }
+
+        if ((Input.GetKeyDown(firstKey) || Input.GetKeyDown(secondKey)) && mainImage.activeSelf && canUseAbility)
         {
             mainImage.SetActive(false);
             otherImage.SetActive(true);

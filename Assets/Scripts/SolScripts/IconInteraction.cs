@@ -15,16 +15,27 @@ public class IconInteraction : MonoBehaviour
     private float mainAlpha = 1.0f;
     private float changedAlpha = 0.5f;
     public float abilityCooldown;
+    public string abilityToCheck;
+    public bool canUseAbility;
 
-    void Start()
+
+    void Awake()
     {
         imageColor = mainImage.color;
+        canUseAbility = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased(abilityToCheck);
     }
 
     void Update()
     {
+        if (!canUseAbility)
+        {
+            mainImage.enabled = false;
+            barImage.enabled = false;
+        }
+        
+        
         abilityUsed = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().usedAbility;
-        if ((Input.GetKeyDown(firstKey) || Input.GetKeyDown(secondKey)) && abilityUsed)
+        if ((Input.GetKeyDown(firstKey) || Input.GetKeyDown(secondKey)) && abilityUsed && canUseAbility)
         {
             barImage.GetComponent<AbilityDurationBar>().cooldownTimer = 5.0f;
             imageColor.a = changedAlpha;

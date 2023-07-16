@@ -1088,6 +1088,8 @@ MonoBehaviour:
   secondKey: 32
   abilityUsed: 0
   abilityCooldown: 0
+  abilityToCheck: 
+  canUseAbility: 0
 --- !u!1 &318817561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1494,8 @@ MonoBehaviour:
   otherImage: {fileID: 2145093541}
   firstKey: 49
   secondKey: 113
+  canUseAbility: 0
+  abilityToCheck: qAbility
 --- !u!1 &423677067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3393,8 @@ MonoBehaviour:
   secondKey: 101
   abilityUsed: 0
   abilityCooldown: 10
+  abilityToCheck: eAbility
+  canUseAbility: 0
 --- !u!1 &1185637247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4600,6 +4606,8 @@ MonoBehaviour:
   secondKey: 116
   abilityUsed: 0
   abilityCooldown: 15
+  abilityToCheck: fAbility
+  canUseAbility: 0
 --- !u!1 &1672889902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6589,6 +6597,8 @@ MonoBehaviour:
   otherImage: {fileID: 421430674}
   firstKey: 49
   secondKey: 113
+  canUseAbility: 0
+  abilityToCheck: qAbility
 --- !u!114 &2145093544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6724,6 +6734,8 @@ MonoBehaviour:
   secondKey: 114
   abilityUsed: 0
   abilityCooldown: 10
+  abilityToCheck: rAbility
+  canUseAbility: 0
 --- !u!1001 &4780739484010461669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6884,6 +6896,10 @@ PrefabInstance:
     - target: {fileID: 5431568701888025589, guid: b8aa7427bae46481ab6f85f8d5c5ca1b, type: 3}
       propertyPath: m_Name
       value: GoodSquare
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431568701888025589, guid: b8aa7427bae46481ab6f85f8d5c5ca1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5431568701888025591, guid: b8aa7427bae46481ab6f85f8d5c5ca1b, type: 3}
       propertyPath: m_RootOrder
