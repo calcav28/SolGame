@@ -26,6 +26,18 @@ public class IconInteraction : MonoBehaviour
     {
         imageColor = mainImage.color;
         canUseAbility = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased(abilityToCheck);
+        switch (abilityToCheck)
+        {
+            case "eAbility":
+                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
+                break;
+            case "rAbility":
+                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
+                break;
+            case "fAbility":
+                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltCooldown;
+                break;
+        }
     }
 
     void Update()

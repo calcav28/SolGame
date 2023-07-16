@@ -552,12 +552,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2037dabdfa549ff86ec6e8b8015ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eNumber: 10
-  rNumber: 10
-  fNumber: 15
+  eNumber: 0
+  rNumber: 0
+  fNumber: 0
   eNumberCountdown: 0
   rNumberCountdown: 0
   fNumberCountdown: 0
+  eNumberCooldown: 0
+  rNumberCooldown: 0
+  fNumberCooldown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 141764872}
   compareText: 
@@ -690,7 +693,7 @@ RectTransform:
   m_Children:
   - {fileID: 1944163270}
   m_Father: {fileID: 1431794547}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1274,7 +1277,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1431794547}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1390,12 +1393,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2037dabdfa549ff86ec6e8b8015ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eNumber: 10
-  rNumber: 10
-  fNumber: 15
+  eNumber: 0
+  rNumber: 0
+  fNumber: 0
   eNumberCountdown: 0
   rNumberCountdown: 0
   fNumberCountdown: 0
+  eNumberCooldown: 0
+  rNumberCooldown: 0
+  fNumberCooldown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 374990119}
   compareText: 
@@ -1558,6 +1564,9 @@ MonoBehaviour:
   eNumberCountdown: 0
   rNumberCountdown: 0
   fNumberCountdown: 0
+  eNumberCooldown: 0
+  rNumberCooldown: 0
+  fNumberCooldown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 423677070}
   compareText: 
@@ -2202,12 +2211,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2037dabdfa549ff86ec6e8b8015ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eNumber: 10
-  rNumber: 10
-  fNumber: 15
+  eNumber: 0
+  rNumber: 0
+  fNumber: 0
   eNumberCountdown: 0
   rNumberCountdown: 0
   fNumberCountdown: 0
+  eNumberCooldown: 0
+  rNumberCooldown: 0
+  fNumberCooldown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 663228479}
   compareText: 
@@ -3396,11 +3408,11 @@ MonoBehaviour:
   barImage: {fileID: 1224547898}
   otherObject1: {fileID: 209640632}
   otherObject2: {fileID: 1944163269}
-  otherObject3: {fileID: 0}
+  otherObject3: {fileID: 374990117}
   firstKey: 50
   secondKey: 101
   abilityUsed: 0
-  abilityCooldown: 10
+  abilityCooldown: 0
   abilityToCheck: eAbility
   canUseAbility: 0
 --- !u!1 &1185637247
@@ -4080,8 +4092,8 @@ RectTransform:
   - {fileID: 421430675}
   - {fileID: 2145093542}
   - {fileID: 1176402969}
-  - {fileID: 374990118}
   - {fileID: 209640633}
+  - {fileID: 374990118}
   - {fileID: 2145477736}
   - {fileID: 1647168695}
   - {fileID: 764613459}
@@ -4616,7 +4628,7 @@ MonoBehaviour:
   firstKey: 52
   secondKey: 116
   abilityUsed: 0
-  abilityCooldown: 15
+  abilityCooldown: 0
   abilityToCheck: fAbility
   canUseAbility: 0
 --- !u!1 &1672889902
@@ -5195,12 +5207,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2037dabdfa549ff86ec6e8b8015ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eNumber: 10
-  rNumber: 10
-  fNumber: 15
+  eNumber: 0
+  rNumber: 0
+  fNumber: 0
   eNumberCountdown: 0
   rNumberCountdown: 0
   fNumberCountdown: 0
+  eNumberCooldown: 0
+  rNumberCooldown: 0
+  fNumberCooldown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 1864178344}
   compareText: 
@@ -5646,12 +5661,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2037dabdfa549ff86ec6e8b8015ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eNumber: 10
-  rNumber: 10
-  fNumber: 15
+  eNumber: 0
+  rNumber: 0
+  fNumber: 0
   eNumberCountdown: 0
   rNumberCountdown: 0
   fNumberCountdown: 0
+  eNumberCooldown: 0
+  rNumberCooldown: 0
+  fNumberCooldown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 1944163272}
   compareText: 
@@ -5973,12 +5991,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2037dabdfa549ff86ec6e8b8015ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eNumber: 10
-  rNumber: 10
-  fNumber: 15
+  eNumber: 0
+  rNumber: 0
+  fNumber: 0
   eNumberCountdown: 0
   rNumberCountdown: 0
   fNumberCountdown: 0
+  eNumberCooldown: 0
+  rNumberCooldown: 0
+  fNumberCooldown: 0
   circleDude: {fileID: 504320689}
   displayText: {fileID: 1978274762}
   compareText: 
@@ -6749,7 +6770,7 @@ MonoBehaviour:
   firstKey: 51
   secondKey: 114
   abilityUsed: 0
-  abilityCooldown: 10
+  abilityCooldown: 0
   abilityToCheck: rAbility
   canUseAbility: 0
 --- !u!1001 &4780739484010461669

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class AbilityTimerToText : MonoBehaviour
 {
-    public float eNumber = 10;
-    public float rNumber = 10;
-    public float fNumber = 15;
+    public float eNumber;
+    public float rNumber;
+    public float fNumber;
     public float eNumberCountdown;
     public float rNumberCountdown;
     public float fNumberCountdown;
@@ -21,9 +22,9 @@ public class AbilityTimerToText : MonoBehaviour
     void Awake()
     {
         compareText = displayText.text;
-        eNumber = 10;
-        rNumber = 10;
-        fNumber = 15;
+        eNumber = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
+        rNumber = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
+        fNumber = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltCooldown;
         eNumberCountdown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
         eNumberCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeCooldown;
         rNumberCountdown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedCooldown;
@@ -61,7 +62,7 @@ public class AbilityTimerToText : MonoBehaviour
         switch (compareText)
         {
         case "2ETime": 
-            if (eNumber == 10) {
+            if (eNumber == eNumberCooldown) {
                 displayText.text = "";
             } else {
                     eNumberCountdown = Mathf.FloorToInt(eNumberCountdown);
@@ -70,7 +71,7 @@ public class AbilityTimerToText : MonoBehaviour
             break;
 
         case "3RTime":
-            if (rNumber == 10) {
+            if (rNumber == rNumberCooldown) {
                 displayText.text = "";
             } else {
                     rNumberCountdown = Mathf.FloorToInt(rNumberCountdown);
@@ -79,7 +80,7 @@ public class AbilityTimerToText : MonoBehaviour
             break;
 
         case "4FTime":
-            if (fNumber == 15) {
+            if (fNumber == fNumberCooldown) {
                 displayText.text = "";
             } else {
                     fNumberCountdown = Mathf.FloorToInt(fNumberCountdown);
