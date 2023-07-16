@@ -12,6 +12,6 @@ public class TestDisplayPoints : MonoBehaviour
     void Update()
     {
         currentPoints = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solProPoints;
-        textForPoints.text = currentPoints.ToString();
+        textForPoints.text = currentPoints.ToString();   
     }
 }
