@@ -33,20 +33,6 @@ public class IconInteraction : MonoBehaviour
         canUseAbility = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased(abilityToCheck);
         abilityCooldown = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt(abilityToCheck);
 
-        /*
-        switch (abilityToCheck)
-        {
-            case "eAbility":
-                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSizeTimer;
-                break;
-            case "rAbility":
-                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballSpeedTimer;
-                break;
-            case "fAbility":
-                abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltTimer;
-                break;
-        }
-        */
 
         if (!canUseAbility)
         {
