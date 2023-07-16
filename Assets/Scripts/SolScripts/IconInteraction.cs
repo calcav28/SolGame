@@ -16,7 +16,7 @@ public class IconInteraction : MonoBehaviour
     public bool abilityUsed;
     private Color imageColor;
     private float mainAlpha = 1.0f;
-    private float changedAlpha = 0.5f;
+    private float changedAlpha = 0.25f;
     public float abilityCooldown;
     public string abilityToCheck;
     public bool canUseAbility;
@@ -31,6 +31,9 @@ public class IconInteraction : MonoBehaviour
     void Update()
     {
         canUseAbility = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased(abilityToCheck);
+        abilityCooldown = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchasedInt(abilityToCheck);
+
+        /*
         switch (abilityToCheck)
         {
             case "eAbility":
@@ -43,6 +46,7 @@ public class IconInteraction : MonoBehaviour
                 abilityCooldown = GameObject.Find("Circle1").GetComponent<RotateAroundPoint>().ballUltTimer;
                 break;
         }
+        */
 
         if (!canUseAbility)
         {
