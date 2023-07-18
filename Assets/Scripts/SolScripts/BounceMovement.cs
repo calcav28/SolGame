@@ -21,9 +21,8 @@ public class BounceMovement : MonoBehaviour
         {
             GameObject.Find("Character").GetComponent<CharacterDestroyObject>().ballsHit += 3;
             Destroy(this.gameObject);
-            Debug.Log("hit wall");
+            //add to counter to display total amount of ships saved
         }
         Destroy(this.gameObject);
-        Debug.Log("hit other :)");
     }
 }

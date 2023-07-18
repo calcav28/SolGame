@@ -17,6 +17,8 @@ public class SolCheckUpgrades : MonoBehaviour
         boughtSecondUpgrade = GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().getIfPurchased(secondUpgradeCheck);
         checkFirstUpgrade();
         checkSecondUpgrade();
+        //also ensure to hide descriptions (afer buying item, and leaving screen totally, descripion comes back even though
+        //original upgrade isn't there (since its gone from this script)
     }
 
 
