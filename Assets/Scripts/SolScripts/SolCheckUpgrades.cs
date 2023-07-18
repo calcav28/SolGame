@@ -10,6 +10,8 @@ public class SolCheckUpgrades : MonoBehaviour
     public bool boughtSecondUpgrade;
     public GameObject firstUpgrade;
     public GameObject secondUpgrade;
+    public GameObject firstDescription;
+    public GameObject secondDescription;
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +29,7 @@ public class SolCheckUpgrades : MonoBehaviour
         if (boughtFirstUpgrade)
         {
             firstUpgrade.SetActive(false);
+            firstDescription.SetActive(false);
             secondUpgrade.SetActive(true);
         }
     }
@@ -36,6 +39,7 @@ public class SolCheckUpgrades : MonoBehaviour
         if (boughtSecondUpgrade)
         {
             secondUpgrade.SetActive(false);
+            secondDescription.SetActive(false);
         }
     }
 }

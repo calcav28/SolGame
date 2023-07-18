@@ -1,11 +1,11 @@
 {
     "wasdMovement": true,
-    "solProPoints": 0,
+    "solProPoints": 66,
     "solEasyHighScore": 0,
     "solEasyTime": 0,
     "solMedHighScore": 0,
     "solMedTime": 0,
-    "solHardHighScore": 0,
+    "solHardHighScore": 35,
     "solHardTime": 0,
     "solGamesPlayed": 0,
     "solHasQAbility": false,
