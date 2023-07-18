@@ -13,6 +13,7 @@ public class BuyItem : MonoBehaviour
     public GeneralPlayerStats generalStuff;
     public bool hasBeenPurchased;
     public string itemToCheck;
+    public GameObject itemDescription;
 
     void Start()
     {
@@ -60,6 +61,7 @@ public class BuyItem : MonoBehaviour
                 {
                     GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solProPoints -= pointsToBuy;
                     solStuff.solBuyItem(itemToActivate);
+                    itemToPurchase.GetComponent<ShowDescriptionOnMouseOver>().OnMouseExit(); //not working, fix later
                     itemToPurchase.SetActive(false);
                     nextItemToPurchase.SetActive(true);
                 }
