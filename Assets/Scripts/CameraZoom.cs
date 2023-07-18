@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraZoom : MonoBehaviour
 {
     float MouseZoomSpeed = 1.0f;
-    //float ZoomMinBound = 0.1f;
+    //float ZoomMinBound = 0.1f;   //keep maybe for later?
     //float ZoomMaxBound = 10.9f;
     public Camera cam;
 
