@@ -22,7 +22,7 @@ public class SecondEnemyRandomSpawner : MonoBehaviour
 
     void spawnObjectAtRandom()
     {
-        Vector3 randomPosit = new Vector3(transform.position.x + Random.Range(-8.0f, 8.0f), transform.position.y + Random.Range(-0.3f, 0.3f), 0);
+        Vector3 randomPosit = new Vector3(transform.position.x + Random.Range(-9.5f, 9.5f), transform.position.y + Random.Range(-0.2f, 0.2f), 0);
 
         Instantiate(circle, randomPosit, Quaternion.identity);
     }
