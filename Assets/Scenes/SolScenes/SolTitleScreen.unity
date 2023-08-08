@@ -1121,7 +1121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: itemToCheck
-      value: ultAbility
+      value: spacebarAbility
       objectReference: {fileID: 0}
     - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: pointsToBuy
@@ -1139,6 +1139,10 @@ PrefabInstance:
       propertyPath: itemDescription
       value: 
       objectReference: {fileID: 1480848709}
+    - target: {fileID: 585854579816917868, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
+      propertyPath: nextItemToPurchase
+      value: 
+      objectReference: {fileID: 1906290827}
     - target: {fileID: 871360459796064442, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -6146,9 +6150,9 @@ MonoBehaviour:
   boughtFirstUpgrade: 0
   boughtSecondUpgrade: 0
   firstUpgrade: {fileID: 113554126}
-  secondUpgrade: {fileID: 0}
+  secondUpgrade: {fileID: 1906290827}
   firstDescription: {fileID: 1480848709}
-  secondDescription: {fileID: 0}
+  secondDescription: {fileID: 1906290827}
 --- !u!1001 &1278139539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8649,9 +8653,9 @@ MonoBehaviour:
   boughtFirstUpgrade: 0
   boughtSecondUpgrade: 0
   firstUpgrade: {fileID: 1665189615619097148}
-  secondUpgrade: {fileID: 0}
+  secondUpgrade: {fileID: 1906290827}
   firstDescription: {fileID: 6063657369863827292}
-  secondDescription: {fileID: 0}
+  secondDescription: {fileID: 1906290827}
 --- !u!1001 &1600513911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9834,6 +9838,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843028511}
   m_CullTransparentMesh: 1
+--- !u!1 &1906290827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1906290828}
+  m_Layer: 0
+  m_Name: Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1906290828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906290827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 631.0431, y: 212.76286, z: -0.7930544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911475097
 GameObject:
   m_ObjectHideFlags: 0

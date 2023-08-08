@@ -23,8 +23,12 @@ public class CharacterDestroyObject : MonoBehaviour
             (coll.gameObject != GameObject.Find("OrbitCircle (1)")) &&
             isInvulnerable)
         {
+            if (coll.gameObject.tag != "Friend")
+            {
+                Destroy(coll.gameObject);
+                ballsHit += 1;
+            }
             Destroy(coll.gameObject);
-            ballsHit += 1;
         }
     }
 }

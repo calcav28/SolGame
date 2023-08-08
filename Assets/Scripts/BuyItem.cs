@@ -17,7 +17,7 @@ public class BuyItem : MonoBehaviour
 
     void Start()
     {
-        hasBeenPurchased = solStuff.getIfPurchased(itemToCheck);
+        //hasBeenPurchased = solStuff.getIfPurchased(itemToCheck);
         
         if (hasBeenPurchased)
         {
@@ -29,7 +29,7 @@ public class BuyItem : MonoBehaviour
 
     void Awake()
     {
-        hasBeenPurchased = solStuff.getIfPurchased(itemToCheck);
+        //hasBeenPurchased = solStuff.getIfPurchased(itemToCheck);
 
         if (hasBeenPurchased)
         {

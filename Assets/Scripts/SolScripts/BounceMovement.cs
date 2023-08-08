@@ -6,6 +6,12 @@ public class BounceMovement : MonoBehaviour
 {
     public AudioClip playOnSuccess;
     public AudioClip playOnDeath;
+    public int amountToAdd;
+
+    void Awake()
+    {
+        amountToAdd = GameObject.Find("GlobalScripts").GetComponent<SolGameStats>().amountToAdd;
+    }
     
     void Update()
     {
@@ -21,7 +27,7 @@ public class BounceMovement : MonoBehaviour
             (coll.gameObject == GameObject.Find("Wall")))
         {
             GameObject.Find("PlayOnSuccess").GetComponent<AudioSource>().Play();
-            GameObject.Find("Character").GetComponent<CharacterDestroyObject>().ballsHit += 3;
+            GameObject.Find("Circle1").GetComponent<DestroyObject>().ballsHit += amountToAdd;
             Destroy(this.gameObject);
             //add to counter to display total amount of ships saved
         }

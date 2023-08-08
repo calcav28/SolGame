@@ -14,6 +14,7 @@ public class SolGameStats : MonoBehaviour
     public float enemyRepeat;
     public float enemyCircleSpeed;
     public float enemyCircleSize;
+    public int amountToAdd;
 
 
     //turn into separate function and have it call awake on loading basicmovement scene
@@ -101,6 +102,7 @@ public class SolGameStats : MonoBehaviour
                 spawnerFour.GetComponent<RandomSpawner>().repeat = enemyRepeat;
                 enemyCircleSpeed = 2.0f;
                 enemyCircleSize = 1.0f;
+                amountToAdd = 3;
                 break;
             case "medium":
                 enemyRepeat = 5.0f;
@@ -115,6 +117,7 @@ public class SolGameStats : MonoBehaviour
                 spawnerFour.GetComponent<RandomSpawner>().repeat = enemyRepeat;
                 enemyCircleSpeed = 2.5f;
                 enemyCircleSize = 0.9f;
+                amountToAdd = 6;
                 break;
             case "hard":
                 enemyRepeat = 3.5f;
@@ -131,6 +134,7 @@ public class SolGameStats : MonoBehaviour
                 spawnerFive.GetComponent<RandomSpawner>().repeat = enemyRepeat;
                 enemyCircleSpeed = 3.5f;
                 enemyCircleSize = 0.8f;
+                amountToAdd = 9;
                 break;
         }
     }
