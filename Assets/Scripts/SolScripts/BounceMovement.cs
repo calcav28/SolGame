@@ -18,14 +18,17 @@ public class BounceMovement : MonoBehaviour
         if (coll.gameObject == GameObject.Find("Wall (3)") ||
             (coll.gameObject == GameObject.Find("Wall (2)")) ||
             (coll.gameObject == GameObject.Find("Wall (1)")) ||
-            (coll.gameObject == GameObject.Find("Wall")) )
+            (coll.gameObject == GameObject.Find("Wall")))
         {
             GameObject.Find("PlayOnSuccess").GetComponent<AudioSource>().Play();
             GameObject.Find("Character").GetComponent<CharacterDestroyObject>().ballsHit += 3;
             Destroy(this.gameObject);
             //add to counter to display total amount of ships saved
         }
-        GameObject.Find("PlayOnDestruction").GetComponent<AudioSource>().Play();
-        Destroy(this.gameObject);
+        else
+        {
+            GameObject.Find("PlayOnDestruction").GetComponent<AudioSource>().Play();
+            Destroy(this.gameObject);
+        }
     }
 }

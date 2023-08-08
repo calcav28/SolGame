@@ -17,6 +17,7 @@ public class SolGameStats : MonoBehaviour
 
 
     //turn into separate function and have it call awake on loading basicmovement scene
+    /*
     void Update()
     {
         spawnerOne = GameObject.Find("Spawner1");
@@ -74,8 +75,9 @@ public class SolGameStats : MonoBehaviour
                 break;
         }
     }
+    */
 
-    void setDifficulty()
+    public void setDifficulty()
     {
         spawnerOne = GameObject.Find("Spawner1");
         spawnerTwo = GameObject.Find("Spawner2");
