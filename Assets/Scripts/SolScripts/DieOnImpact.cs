@@ -28,7 +28,8 @@ public class DieOnImpact : MonoBehaviour
             (coll.gameObject != GameObject.Find("OrbitCircle")) &&
             (coll.gameObject != GameObject.Find("OrbitCircle (1)")) &&
             !isInvulnerable)
-        { 
+        {
+            this.GetComponent<AudioSource>().Play(0);
             GameObject.Find("TimerTest").GetComponent<Timer>().playing = false;
             SceneManager.LoadScene("SolDeathScreen");
             DontDestroyOnLoad(charac);

@@ -17,8 +17,14 @@ public class DestroyObject : MonoBehaviour
             (coll.gameObject != GameObject.Find("OrbitCircle")) &&
             (coll.gameObject != GameObject.Find("OrbitCircle (1)")))
         {
+            if (coll.gameObject.tag != "Friend")
+            {
+                this.GetComponent<AudioSource>().Play(0);
+                Destroy(coll.gameObject);
+                ballsHit += 1;
+            }
+            //GameObject.Find("PlayOnDestruction").GetComponent<AudioSource>().Play();
             Destroy(coll.gameObject);
-            ballsHit += 1;
         }
     }
 }
