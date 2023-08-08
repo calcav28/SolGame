@@ -25,6 +25,7 @@ public class CharacterDestroyObject : MonoBehaviour
         {
             if (coll.gameObject.tag != "Friend")
             {
+                GameObject.Find("PlayOnDestruction").GetComponent<AudioSource>().Play();
                 Destroy(coll.gameObject);
                 ballsHit += 1;
             }
