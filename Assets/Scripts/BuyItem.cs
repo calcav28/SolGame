@@ -62,6 +62,7 @@ public class BuyItem : MonoBehaviour
                     GameObject.Find("GlobalScripts").GetComponent<SolPlayerStats>().solProPoints -= pointsToBuy;
                     solStuff.solBuyItem(itemToActivate);
                     itemToPurchase.GetComponent<ShowDescriptionOnMouseOver>().OnMouseExit(); //not working, fix later
+                    GameObject.Find("BuySound").GetComponent<AudioSource>().Play();
                     itemToPurchase.SetActive(false);
                     nextItemToPurchase.SetActive(true);
                 }
