@@ -3935,7 +3935,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &604074455
 PrefabInstance:
@@ -5993,7 +5993,7 @@ PrefabInstance:
         Lasts 5 seconds
 
         Gain 1 charge per
-        15 score you gain'
+        30 score you gain'
       objectReference: {fileID: 0}
     - target: {fileID: 5719309103779547561, guid: 9583f038c6c87014ab9406dd9e7cd93e, type: 3}
       propertyPath: m_fontSize
@@ -7758,7 +7758,7 @@ PrefabInstance:
 
         Lasts 5 seconds
 
-        Gain 1 charge per 15 score you
+        Gain 1 charge per 30 score you
         gain)'
       objectReference: {fileID: 0}
     - target: {fileID: 6063657369723533450, guid: 9b4cab9653aebb54c9ee85cc37293075, type: 3}
