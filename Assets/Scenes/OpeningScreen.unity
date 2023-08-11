@@ -239,6 +239,7 @@ MonoBehaviour:
   enemyRepeat: 0
   enemyCircleSpeed: 0
   enemyCircleSize: 0
+  amountToAdd: 0
 --- !u!4 &78584171
 Transform:
   m_ObjectHideFlags: 0
