@@ -544,7 +544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &31100325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3155,7 +3155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Each red circle gives 1 score
+  m_text: 'Each asteroid gives 1 score.
 
 
     Each friendly ship that gets across
@@ -3165,9 +3165,13 @@ MonoBehaviour:
     Easy: 3 points
 
     Medium:
-    6 points
+    4 points
 
-    Hard: 9 points'
+    Hard: 5 points
+
+
+    The harder the difficulty, the more asteroids
+    that appear.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6354,11 +6358,11 @@ RectTransform:
   m_Father: {fileID: 444779695}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -130}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1102491568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9487,23 +9491,22 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Credits:
 
-    
 
-    Thank you to Dustyroom for their free sound effects
+
+    Thank you to Dustyroom for their free sound effects asset
+    on the Unity Asset Store.
+
+
+    Thank you to Vertex Studio for their free music
     asset on the Unity Asset Store.
 
 
-    Thank you to Vertex Studio for their free
-    music asset on the Unity Asset Store.
+    These two asset packs helped me make something
+    that is more interesting.
 
 
-    These two asset packs helped me
-    make something that is more interesting.
-
-
-    Also thanks to all my friends
-    and family who helped play test this game and give ideas for abilities and other
-    mechanics. '
+    Also thanks to all my friends and family who
+    helped play test this game and give ideas for abilities and other mechanics. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

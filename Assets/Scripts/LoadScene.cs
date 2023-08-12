@@ -13,6 +13,8 @@ public class LoadScene : MonoBehaviour
     //you will need to implement the singleton pattern to ensure stuff doesn't break
     public void generalSceneLoader(string sceneName)
     {
+        theCharacter = GameObject.Find("Character");
+        Destroy(theCharacter);
         DontDestroyOnLoad(GameObject.Find("GlobalScripts"));
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
@@ -22,9 +24,9 @@ public class LoadScene : MonoBehaviour
     public void solSceneLoader(string sceneName) {
         theCharacter = GameObject.Find("Character");
         theTimer = GameObject.Find("TimerTest");
+        Destroy(theCharacter);
         DontDestroyOnLoad(GameObject.Find("GlobalScripts"));
         SceneManager.LoadScene(sceneName);
-        Destroy(theCharacter);
         Time.timeScale = 1;
         //theTimer.GetComponent<Timer>().playing = true;
     }
