@@ -21,7 +21,7 @@ public class RandomSpawner : MonoBehaviour
     }
 
     void spawnObjectAtRandom() {
-        Vector3 randomPosit = new Vector3(transform.position.x + Random.Range(-3.0f, 3.0f), transform.position.y + Random.Range(-1.0f, 1.0f), 0);
+        Vector3 randomPosit = new Vector3(transform.position.x + Random.Range(-2.0f, 2.0f), transform.position.y + Random.Range(-1.0f, 1.0f), 0);
 
         Instantiate(circle, randomPosit, Quaternion.identity);
     }
