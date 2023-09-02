@@ -1,6 +1,7 @@
 # Super Minigame Pros
 
-Super Minigame Pros is an arcade-style game comprised of small, esay to play games.
+Super Minigame Pros is an arcade-style game comprised of small, esay to play games. The final goal of Super Minigame Pros is to have at least 3 playable minigames, with the ability to gain currency that can be used to buy cool cosmetics. Super Minigame Pros will always be free. 
+While Super Minigame Pros is currently singleplayer only, it may become a party style game with multiplayer if I can learn networking.
 
 Super Minigame Pros is created using the Unity game engine with C#.
 
